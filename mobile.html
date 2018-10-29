@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>tukuyo's web site</title>
+    <meta name="author" content="tukuyo">
+    <meta name="description" content="tukuyoの個人サイトです．">
+    <meta content="width=320,initial-scale=1.0,minimum-scale=1.0" name="viewport">
+    <link rel="stylesheet" media="all" type="text/css" href="css/style-mobile.css">
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121556197-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-121556197-1');
+    </script>
+    <script src="js/jquery.csv.js"></script>
+    <script src="js/mobile.js"></script>
+</head>
+
+<body>
+    <div id="title" class="card" data-0="opacity:1;" data-500="opacity:0;">
+        <div class="job">学生 / エンジニア</div>
+        <div class="img">
+            <img src="pic/icon.png" alt="">
+        </div>
+        <div class="name">
+            <div class="nickname">つくよ</div>
+            <div class="yomi">Tukuyo</div>
+        </div>
+        <a id="scroll">
+            <span></span>
+            <span></span>
+            <span></span>Scroll</a>
+    </div>
+    <div id="prof" class="card" data-0="top:100%;opacity:0;z-index:100;" data-500="top:0%;opacity:1;" data-1500="top:0%;opacity1"
+        data-1600="top:0%;opacity:0;">
+        <div class="about">About</div>
+        <div class="name">
+            <div class="nickname">Tukuyo</div>
+        </div>
+        <div class="text" data-10="opacity:0;" data-350="opacity:1;" data-700="opacity:1;display:block;" data-1000="opacity:0;display:none;">
+            滋賀県生まれ 21歳 大学在学中
+            <br> (院進学予定)
+            <br>
+            <br> 趣味
+            <br> 音楽鑑賞 プログラミング ゲーム
+            <br>
+            <br>
+        </div>
+        <div class="text" data-1000="opacity:0;" data-1350="opacity:1;" data-1500="opacity:1;">
+            <h3>Skills</h3>
+            <br> Unity・3Dモデル作成(blender)・動画制作
+            <br>
+            <br> ・Read Write
+            <br> C ・ C++ ・ C#
+            <br> Ruby ・ Python
+            <br> HTML ・  CSS
+            <br>
+            <br> ・learning
+            <br> Swift ・ Rails
+            <br><br><br>
+            <p data-1100="opacity:0;" data-1200="opacity:1;">よろしくお願いします</p>
+        </div>
+    </div>
+    <div id="works" class="card" data-1600="opacity:0;z-index:1;" data-1800="opacity:1;z-index:1;" data-2300="top:0%;" data-2500="top:-100%;">
+        <div class="work">work</div>
+        <ul class="list">
+        </ul>
+    </div>
+    <div id="last" class="card" data-2400="opacity:0;z-index:0;" data-2600="opacity:1;z-index:0;">
+        <div class="poe" hidden>Everythig starts with "Hello".</div>
+        <div class="poe">Code wins arguments.</div>
+        <p>&copy;2018 tukuyo</p>
+    </div>
+    <!-- fire -->
+    <script src="js/skrollr.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+        // smartphone
+        if (!((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('Android') > 0)) {
+            location.href = "./index.html";
+        }
+        $(window).on('touchmove.noScroll', function (e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+
+</html>

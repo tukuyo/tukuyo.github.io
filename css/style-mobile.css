@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Londrina+Outline);
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    letter-spacing: 1px;
+    font-family: 'Josefin Sans', 'Noto Sans JP',serif;
+}
+
+.card {
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    padding: 10% 10%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+}
+    .card .job {
+        margin-top: 20px;
+        font-size: 11px;
+        color: rgb(56, 56, 56);
+    }
+    .card .img {
+        margin: 11%;
+    }
+        .card .img img {
+            width: 120px;
+            height: 120px;
+            border-radius: 100%;
+        }
+    .card .name {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+        .card .name .nickname {
+            font-size: 18px;
+            letter-spacing: 0.4em;
+            margin-bottom: 0.3em;
+        }
+        .card .name .yomi {
+            font-size: 10px;
+            letter-spacing: 0.4em;
+            margin-bottom: 0.3em;
+        }
+    .card .text {
+        position: relative;
+        padding: 30px 10px;
+        width:auto;
+        font-size: 11px;
+        line-height: 1.8em;
+    }
+        
+
+#title {
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0; 
+    background-color:#fff
+}
+
+#prof {
+    background-color: #313437;
+    color: #fff;
+}
+
+#works .work {
+    font-size: 18px;
+}
+#works ul {
+    padding-left: 0px; 
+    margin-top: 30px;
+    list-style: none;
+    text-align: left;
+    font-size: 15px;
+}
+#works ul li {
+    margin:10px;
+}
+
+#last .poe{
+    margin-top: 50%;
+    font-family: 'Londrina Outline', cursive;
+    font-size: 50px;
+}
+
+#last p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #adadad;
+}
+#scroll {
+    padding-top: 80px;
+    position: relative;
+    bottom: -200px;
+}
+#scroll span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb 2s infinite;
+    animation: sdb 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+}
+#scroll span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+#scroll span:nth-of-type(2) {
+    top: 16px;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+}
+#scroll span:nth-of-type(3) {
+    top: 32px;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}
+@-webkit-keyframes sdb {
+    0% {
+    opacity: 0;
+    }
+    50% {
+    opacity: 1;
+    }
+    100% {
+    opacity: 0;
+    }
+}
+@keyframes sdb {
+    0% {
+    opacity: 0;
+    }
+    50% {
+    opacity: 1;
+    }
+    100% {
+    opacity: 0;
+    }
+}

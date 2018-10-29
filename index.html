@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>tukuyo's web site</title>
+    <meta name="author" content="tukuyo">
+    <meta name="description" content="tukuyoの個人サイトです．">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" media="all" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" media="all" type="text/css" href="css/style.css">
+    <script type="text/javascript">
+        // smartphone
+        if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+            location.href = './mobile.html';
+        }
+    </script>
+    <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+    <script src="js/jquery.csv.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121556197-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-121556197-1');
+    </script>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <div id="title">Welcome.</div>
+    </header>
+    <!-- section1 -->
+    <section class="sec1">
+        <div class="prof">
+            <div class="prof-pic">
+                <img src="pic/icon.png">
+            </div>
+            <div class="prof-txt">
+                <header>
+                    <h2>About</h2>
+                </header>
+                <p>
+                    滋賀県生まれ 21歳 大学在学中
+                    <br> 趣味は音楽鑑賞 インディーズバンドを見つける事
+                    <br> 下に作成した物を公開していますので是非('ω')ノ
+                    <br>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="Skills works">
+        <h2>Skills</h2>
+        
+    </section>
+    <!-- Works Section -->
+    <section class="works">
+        <h2>Works</h2>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact</h2>
+        <ul>
+            <li>
+                <a href="https://twitter.com/tukutuku_tukuyo" class="twitter">
+                    <img src="pic/twitter.png" alt="twitter">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/tukuyon/" class="instagram">
+                    <img src="pic/instagram.png" alt="instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/tukuyo" class="github">
+                    <img src="pic/github.png" alt="github">
+                </a>
+            </li>
+            <li>
+                <a href="http://tukuyo.hateblo.jp/" class="hatena">
+                    <img src="pic/hatena.png" alt="hatena">
+                </a>
+            </li>
+            <li>
+                <a href="mailto:tukuyo.dayo@gmail.com" class="mail">
+                    <img src="pic/mail.png" alt="mail">
+                </a>
+            </li>
+        </ul>
+
+    </section>
+
+    <footer id="footer">
+        &copy;2018 tukuyo.
+    </footer>
+    <!-- Swiper js include -->
+    <script src="js/jquery.shuffleLetters.js"></script>
+    <script src="js/title.shuffle.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/works_swipe.js"></script>
+</body>
+
+</html>
