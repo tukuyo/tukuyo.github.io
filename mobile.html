@@ -7,8 +7,27 @@
     <meta name="author" content="tukuyo">
     <meta name="description" content="tukuyoの個人サイトです．">
     <meta content="width=320,initial-scale=1.0,minimum-scale=1.0" name="viewport">
+    <meta name="description" content="tukuyoの個人サイトです．">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:site_name" content="tukuyo's web site">
+    <meta property="og:title" content="tukuyo's web site">
+    <meta property="og:description" content="tukuyoの個人サイトです．">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tukuyo.net/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://www.tukuyo.net/">
+    <link rel="icon" type="image/x-icon" href="../pic/favicon.ico">
     <link rel="stylesheet" media="all" type="text/css" href="css/style-mobile.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js""></script>
+    <script src="js/date.js"></script>
+    <script type="text/javascript">
+        // smartphone
+        if (!((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('Android') > 0)) {
+            location.href = "./index.html";
+        }
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.csv.js"></script>
+    <script src="js/mobile.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121556197-1"></script>
     <script>
@@ -17,8 +36,6 @@
         gtag('js', new Date());
         gtag('config', 'UA-121556197-1');
     </script>
-    <script src="js/jquery.csv.js"></script>
-    <script src="js/mobile.js"></script>
 </head>
 
 <body>
@@ -58,7 +75,7 @@
             <br> ・Read Write
             <br> C ・ C++ ・ C#
             <br> Ruby ・ Python
-            <br> HTML ・  CSS
+            <br> HTML ・ CSS
             <br>
             <br> ・learning
             <br> Swift ・ Rails
@@ -66,7 +83,8 @@
             <p data-1100="opacity:0;" data-1200="opacity:1;">よろしくお願いします</p>
         </div>
     </div>
-    <div id="works" class="card" data-1600="opacity:0;z-index:1;" data-1800="opacity:1;z-index:1;" data-2300="top:0%;" data-2500="top:-100%;">
+    <div id="works" class="card" data-1600="opacity:0;z-index:1;" data-1800="opacity:1;z-index:1;" data-2300="top:0%;"
+        data-2500="top:-100%;">
         <div class="work">work</div>
         <ul class="list">
         </ul>
@@ -80,10 +98,6 @@
     <script src="js/skrollr.js"></script>
     <script type="text/javascript">
         var s = skrollr.init();
-        // smartphone
-        if (!((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('Android') > 0)) {
-            location.href = "./index.html";
-        }
         $(window).on('touchmove.noScroll', function (e) {
             e.preventDefault();
         });

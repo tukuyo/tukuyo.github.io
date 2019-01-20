@@ -2,6 +2,7 @@ $.get('../csv/itemlist.csv',function(data){
     var csv = $.csv.toArrays(data);
     var itemlist = '';
     var i = false;
+    let button = "<div class="+"button"+"><a href="+"http://www.tukuyo.net/portfolio"+">一覧へ</a></div>"; 
 
     $(csv).each(function(index){
         if(i != false){
@@ -10,15 +11,16 @@ $.get('../csv/itemlist.csv',function(data){
             used.forEach(function(value){
                 li += "<li>" + value + "</li>"
             });
+                console.log(this[6]);
             if (this[6]) {
-                itemlist += "<div class=" + "swiper-slide" + "><div class=" + "wrapper" + "><div class=" + "product-info" + "><div class=" + "product-text" + "><h2> " + this[0] + "</h2><p>" + this[1] + "</p></div><div class=" + "things-used" + "><p>使用した物</p><ul>" + li + "</ul></div></div><div class=" + "product-image" + ">" + '<a href="' + this[6] +'"><img src="' + 'pic/' + this[3] + '.PNG"' + "></a><p>作成日 " + this[4] + "<br> 制作期間 " + this[5] + "</p></div></div></div>";
+                itemlist += "<div><img src=" + "pic/" + this[3] + ".PNG><h3>" + this[0] + "</h3><ul>" + li + "</ul><p>" + this[1] + "</p><div>製作期間：" + this[5] + "</div><div class=" + "button" + "><a href=" + this[6] + ">サイトへ</a></div></div>"
             } else {
-                itemlist += "<div class=" + "swiper-slide" + "><div class=" + "wrapper" + "><div class=" + "product-info" + "><div class=" + "product-text" + "><h2> " + this[0] + "</h2><p>" + this[1] + "</p></div><div class=" + "things-used" + "><p>使用した物</p><ul>" + li + "</ul></div></div><div class=" + "product-image" + '><img src="' + 'pic/' + this[3] + '.PNG"' + "><p>作成日 " + this[4] + "<br> 制作期間 " + this[5] + "</p></div></div></div>";
+                itemlist += "<div><img src=" + "pic/" + this[3] + ".PNG><h3>" + this[0] + "</h3><ul>" + li + "</ul><p>" + this[1] + "</p><div>製作期間：" + this[5] + "</div></div>"                
             }
         }
         i = true;
     })
-    $(".swiper-wrapper").append(itemlist);
-
+    $(".Product").append(itemlist);
+    $(".Product").append(button)
 })
 console.log('***');

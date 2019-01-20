@@ -7,7 +7,14 @@
     <meta name="author" content="tukuyo">
     <meta name="description" content="tukuyoの個人サイトです．">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" media="all" type="text/css" href="css/swiper.min.css">
+    <meta property="og:site_name" content="tukuyo's web site">
+    <meta property="og:title" content="tukuyo's web site">
+    <meta property="og:description" content="tukuyoの個人サイトです．">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tukuyo.net/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://www.tukuyo.net/">
+    <link rel="icon" type="image/x-icon" href="./pic/favicon.ico">
     <link rel="stylesheet" media="all" type="text/css" href="css/style.css">
     <script type="text/javascript">
         // smartphone
@@ -15,6 +22,7 @@
             location.href = './mobile.html';
         }
     </script>
+    <script src="js/date.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/jquery.csv.js"></script>
     <script src="js/main.js"></script>
@@ -29,96 +37,190 @@
 </head>
 
 <body>
-    <!-- header -->
-    <header id="header">
-        <div id="title">Welcome.</div>
+    <header>
+        <nav class="navigation" role="navigation">
+            <ul class="nav-items">
+                <li class="nav-item">
+                    <a>
+                        <label for="trigger1">Works</label>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a>
+                        <label for="trigger2">About</label>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a>
+                        <label for="trigger3">Skills</label>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a>
+                        <label for="trigger4">Contact</label>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <h1>tukuyo's website<p>&copy;2019 tukuyo.</p>
+        </h1>
+
     </header>
-    <!-- section1 -->
-    <section class="sec1">
-        <div class="prof">
-            <div class="prof-pic">
-                <img src="pic/icon.png">
+
+    <div class="wrap">
+        <input type="checkbox" id="trigger1">
+        <input type="checkbox" id="trigger2">
+        <input type="checkbox" id="trigger3">
+        <input type="checkbox" id="trigger4">
+
+        <div class="overlay1">
+            <label for="trigger1" class="overlay_trigger1"></label>
+            <div class="Works">
+                <div class="Card">
+                    <label for="trigger1" class="close_button"><img src="pic/close.svg" class="peke"></label>
+                    <h2>Works</h2>
+                    <div class="Product">
+                        <!-- A -->
+                    </div>
+                </div>
             </div>
-            <div class="prof-txt">
-                <header>
+        </div>
+        <div class="overlay2">
+            <label for="trigger2" class="overlay_trigger2"></label>
+            <div class="About">
+                <div class="Card">
+                    <label for="trigger2" class="close_button"><img src="pic/close.svg" class="peke"></label>
                     <h2>About</h2>
-                </header>
-                <p>
-                    滋賀県生まれ 21歳 大学在学中
-                    <br> 趣味は音楽鑑賞 インディーズバンドを見つける事
-                    <br> 下に作成した物を公開していますので是非('ω')ノ
-                    <br>
-                </p>
+                    <div class="Profile">
+                        <div class="icon"><img src="pic/icon.png" alt="tukuyo" class="icon_img"></div>
+                        <div class="nickname">つくよ</div>
+                        <div class="yomi">tukuyo</div>
+                        <div class="detail">
+                            <p>
+                                年齢：22歳<br>
+                                性別：男<br>
+                                出身：滋賀県<br>
+                                現在：大阪の情報系大学在学中<br>
+                                趣味：音楽鑑賞，プログラミング，ゲーム，国内旅行<br>
+                                <br>
+                            </p>
+                            <h3>history</h3>
+                            <p>中学の時からプログラミングに興味を持ち，<br>
+                                高校から情報系を専攻<br>
+                            </p>
+                            <h3>mind</h3>
+                            <p>"とにかく楽しむ"
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-    <section class="Skills works">
-        <h2></h2>
-        
-    </section>
-    <!-- Works Section -->
-    <section class="works">
-        <h2>Works</h2>
-        <!-- Slider main container -->
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
+        <div class="overlay3">
+            <label for="trigger3" class="overlay_trigger3"></label>
+            <div class="Skills">
+                <div class="Card">
+                    <label for="trigger3" class="close_button"><img src="pic/close.svg" class="peke"></label>
+                    <h2>Skills</h2>
+                    <div class="sk">
+                        <div class="container">
+                            <img src="pic/c.svg" alt="C">
+                            <div class="progress c">
+                                <div class="progressbar"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <img src="pic/cpp.svg" alt="C">
+                            <div class="progress cpp">
+                                <div class="progressbar"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <img src="pic/python.svg" alt="C">
+                            <div class="progress python">
+                                <div class="progressbar"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <img src="pic/ruby.svg" alt="C">
+                            <div class="progress ruby">
+                                <div class="progressbar"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <img src="pic/swift.svg" alt="C">
+                            <div class="progress swift">
+                                <div class="progressbar"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <img src="pic/unity.svg" alt="C">
+                            <div class="progress unity">
+                                <div class="progressbar"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <img src="pic/html.svg" alt="C">
+                            <div class="progress html">
+                                <div class="progressbar"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <img src="pic/css.svg" alt="C">
+                            <div class="progress css">
+                                <div class="progressbar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
-    </section>
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>Contact & Shop</h2>
-        <ul>
-            <li>
-                <a href="https://twitter.com/tukutuku_tukuyo" class="twitter">
-                    <img src="pic/twitter.png" alt="twitter">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/tukuyon/" class="instagram">
-                    <img src="pic/instagram.png" alt="instagram">
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/tukuyo" class="github">
-                    <img src="pic/github.png" alt="github">
-                </a>
-            </li>
-            <li>
-                <a href="http://blog.tukuyo.net/" class="hatena">
-                    <img src="pic/hatena.png" alt="hatena">
-                </a>
-            </li>
-            <li>
-                <a href="mailto:tukuyo.dayo@gmail.com" class="mail">
-                    <img src="pic/mail.png" alt="mail">
-                </a>
-            </li>
-            <li>
-                <a href="https://suzuri.jp/tukutuku_tukuyo" class="suzuri">
-                    <img src="pic/surisurikun.png" alt="suzuri">
-                </a>
-            </li>
-        </ul>
+        <div class="overlay4">
+            <label for="trigger4" class="overlay_trigger4"></label>
+            <div class="Contact">
+                <div class="Card">
+                    <label for="trigger4" class="close_button"><img src="pic/close.svg" class="peke"></label>
+                    <h2>CONTACT</h2>
+                    <p>
+                        各種SNSは以下のアイコンからアクセスできます．
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com/tukutuku_tukuyo" class="twitter">
+                                <img src="pic/twitter.svg" alt="twitter">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/tukuyon/" class="instagram">
+                                <img src="pic/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/tukuyo" class="github">
+                                <img src="pic/github.svg" alt="github">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://blog.tukuyo.net/" class="hatena">
+                                <img src="pic/hatena.svg" alt="hatena">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:tukuyo.dayo@gmail.com" class="mail">
+                                <img src="pic/mail.svg" alt="mail">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://suzuri.jp/tukutuku_tukuyo" class="suzuri">
+                                <img src="pic/surisurikun.png" alt="suzuri">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-    </section>
-
-    <footer id="footer">
-        &copy;2018 tukuyo.
-    </footer>
-    <!-- Swiper js include -->
-    <script src="js/jquery.shuffleLetters.js"></script>
-    <script src="js/title.shuffle.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/works_swipe.js"></script>
+    </div>
 </body>
 
 </html>
