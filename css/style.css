@@ -1,19 +1,9 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
-@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 @import url(https://fonts.googleapis.com/css?family=Staatliches);
-@font-face {
-    font-family: 'Inconsolata';
-    font-style: normal;
-    font-weight: 400;
-    src: local("Inconsolata"), url(font/inconsolata.woff) format("woff");
-}
 
-@font-face {
-    font-family: "migu1m";
-    src: url(font/migu-1m-regular.woff) format("woff");
-}
 
 * {
     overflow: hidden;
@@ -32,8 +22,7 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     font-family: 'Staatliches', cursive;
-
-    background-image: url(../pic/whitenote.jpg);
+    background-image: url(../pic/top.jpg);
     background-position: center center;
     background-size: cover;
     -webkit-background-size: cover;
@@ -52,7 +41,7 @@ header {
 }
 
 p {
-    font-family: 'Inconsolata', 'migu1m', sans-serif;
+    font-family: 'Staatliches', cursive;
 }
 
 .nav-items {
@@ -174,7 +163,7 @@ header h1 {
     left: 0px;
     margin: auto;
     width: 100%;
-    height: 200px;
+    height: 150px;
     text-align: center;
     font-family: 'Pacifico', cursive;
     font-size: 5vw;
@@ -313,6 +302,18 @@ input {
     border-bottom-style: groove;
 }
 
+.Card .close_button {
+    position: absolute;
+    margin: 15px 15px 15px 95%;
+}
+
+.Card .close_button .peke {
+    top: 14px;
+    left: 16px;
+    width: 25px;
+    height: 25px;
+}
+
 .Card .Product {
     height: 90%;
     text-align: center;
@@ -373,23 +374,12 @@ input {
     color: #fff;
 }
 
-
 .Card .Product a {
     margin-top: 100px;
     text-decoration: none;
 }
 
-.Card .close_button {
-    position: absolute;
-    margin: 15px 15px 15px 95%;
-}
-
-.Card .close_button .peke {
-    top: 14px;
-    left: 16px;
-    width: 25px;
-    height: 25px;
-}
+/* Profile */
 
 .Card .Profile {
     height: 93%;
@@ -422,6 +412,8 @@ input {
     margin: 0;
     font-size: 3vw;
 }
+
+/* .Skills */
 
 .Card .sk {
     height: 93%;
@@ -515,31 +507,6 @@ input {
     background-color: #f2cb1e;
 }
 
-/* #five:checked ~ .progress > .progress-bar {
-    width: 5%;
-    background-color: #f63a0f;
-  }
-  
-  #twentyfive:checked ~ .progress > .progress-bar {
-    width: 25%;
-    background-color: #f27011;
-  }
-  
-  #fifty:checked ~ .progress > .progress-bar {
-    width: 50%;
-    background-color: #f2b01e;
-  }
-  
-  #seventyfive:checked ~ .progress > .progress-bar {
-    width: 75%;
-    background-color: #f2d31b;
-  }
-  
-  #onehundred:checked ~ .progress > .progress-bar {
-    width: 100%;
-    background-color: #86e01e;
-  } */
-
 .Contact .Card p {
     margin-top: 10%;
     text-align: center;
@@ -573,16 +540,14 @@ input {
     transform: scale(1.2);
 }
 
-
-
 /* PC laptop */
+
 @media only screen and (min-width:1380px) {
     .container .progress {
         margin: 5% 0 0 10%;
         width: 500px;
         float: left;
     }
-
     .Card h2 {
         font-family: 'Josefin Sans', 'Noto Sans JP', serif;
         font-size: 50px;
