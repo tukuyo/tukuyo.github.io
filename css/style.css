@@ -3,8 +3,6 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 @import url(https://fonts.googleapis.com/css?family=Staatliches);
-
-
 * {
     overflow: hidden;
 }
@@ -71,6 +69,7 @@ header .navigation .nav-items .nav-item a label {
     line-height: calc(30/16);
     transform: translateY(0);
     transition: transform 0.3s ease;
+    text-shadow: 1px 1px 5px #000;
 }
 
 header .navigation .nav-items .nav-item:nth-child(1) {
@@ -316,12 +315,7 @@ input {
 
 .Card .Product {
     height: 90%;
-    text-align: center;
-    overflow: auto;
-}
-
-.Card .Product img {
-    margin-top: 20px;
+    overflow: scroll;
 }
 
 .Card .Product p {
@@ -334,49 +328,61 @@ input {
 }
 
 .Card .Product ul {
-    padding-left: 0;
-    height: 30px;
-    padding-top: 5px;
+    margin: 1% auto;
+    padding: 0;
+    width: 750px;
 }
 
 .Card .Product ul li {
-    display: inline;
-    padding: 3px 3px;
-    font-size: 13px;
-    font-family: 'Playfair Display', serif;
-    color: #000;
-    background-color: rgba(168, 168, 168, 0);
-    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    border: 0.1px solid black;
-    margin-right: 8px;
+    position: relative;
+    width: 720px;
+    height: 180px;
+    margin: 10px 15px 0px;
+    list-style-type: none;
+    display: inline-block;
+    float: left;
+    border: solid 2px #000;
+    border-radius: 20px;
 }
 
-.Card .Product .button {
-    width: 25%;
-    height: 6vh;
-    margin: 30px auto;
-    border-radius: 25px;
+.Product ul li a {
     text-decoration: none;
-    color: #FFF;
-    background-image: linear-gradient(45deg, rgb(7, 255, 243) 0%, #5fb7ff 100%);
-    transition: .4s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: -999px;
+    z-index: 2;
 }
 
-.Card .Product .button:hover {
-    background-image: linear-gradient(45deg, rgb(2, 187, 178) 0%, #209bff 100%);
+.product {
+    width: 100%;
+    height: 100%;
 }
 
-.Card .Product .button a {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #fff;
+.product img {
+    width: 200px;
+    height: 180px;
+    float: left;
 }
 
-.Card .Product a {
-    margin-top: 100px;
-    text-decoration: none;
+.detail1 {
+    float: left;
+    margin: 10px 3.5%;
+    width: 65%;
+}
+
+.detail1 h3 {
+    padding-bottom: 5px;
+    border-bottom: dotted 2px #5757579a;
+    margin: 5px 0;
+}
+
+.detail2 {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5px;
 }
 
 /* Profile */
@@ -412,6 +418,8 @@ input {
     margin: 0;
     font-size: 3vw;
 }
+
+
 
 /* .Skills */
 
