@@ -3,10 +3,7 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 @import url(https://fonts.googleapis.com/css?family=Staatliches);
-<<<<<<< HEAD
 
-=======
->>>>>>> c162abdf837ea20399379db5d75b997f4254aa40
 * {
     overflow: hidden;
 }
@@ -430,20 +427,39 @@ input {
 .Card .sk {
     height: 93%;
     overflow: scroll;
+    text-align: center;
+}
+.sk h1 {
+    padding: 10px 0 10px 0;
+    margin: 10px 0 10px 0;
+}
+.sk h2 {
+    font-size: 25px;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;   
+}
+.sk h3 {
+    font-size: 20px;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 10px;
 }
 
-.container {
-    height: 100px;
-    width: 800px;
-    margin: 5% auto;
+.sk .group {
+    text-align: center;
 }
 
-.container img {
-    width: 100px;
-    height: 100px;
-    ;
-    float: left;
-    margin-left: 5%;
+.sk .icon_group {
+    margin: 0 20%;
+}
+
+.icon_group img {
+    width: 80px;
+    height: 80px;
+    margin-right: 3%;
+    margin-bottom: 10px;
 }
 
 .container .progress {

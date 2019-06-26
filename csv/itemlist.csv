@@ -1,4 +1,5 @@
 名前,説明,使用,画像,作成日,制作期間,URL
+音声議事録Webアプリ,授業中に寝てしまったりした際に聞き忘れを防ぐや，<br>大事なゼミ・会議の会話を音声認識してtxtファイルで保存しておこうというアプリ．デザインは凝ってません,"HTML,CSS,javascript,nodejs,heroku",noimg,2019/5/13,一日,https://minutes-tukuyo.herokuapp.com/
 EwEw毎週英単語,毎週サイトで英単語が表示され<br>その単語を日常生活に取り入れて覚えようというサイト<br>現在閉鎖中,"Ruby on Rails5,Heroku",ewew,2018/8/15,2日,https://ewew-study.herokuapp.com/
 Wedding Movie,友達の結婚式の為に制作．喜んでもらえてよかった．<br>次依頼が来たら，Webサイトと同期するようなものを作ってみたいなと思う．,"なし",WeddingMovie,2018/7/28,１か月,
 ToDoリスト,RubyonRailsを使用して初めて作った物,"Ruby on Rails5,Heroku",todo,2018/6/18,1週間,https://todolist-tukuyo.herokuapp.com/
