@@ -39,6 +39,23 @@ header {
     width: 100%;
 }
 
+.etc {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    bottom: 16px;
+    right: 16px;
+}
+.etc li{
+    display: inline;
+    padding: 5px;
+}
+.etc li a,  .etc li a.visited{
+    color: #fff;
+    text-decoration: none;
+}
+
+
 p {
     font-family: 'Staatliches', cursive;
 }

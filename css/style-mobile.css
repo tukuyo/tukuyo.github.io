@@ -60,7 +60,7 @@ html, body {
 
 .card .text {
     position: absolute;
-    top: 50%;
+    top: 40vh;
     left: 50%;
     -ms-transform: translate(-50%,-50%);
     -webkit-transform : translate(-50%,-50%);
@@ -103,13 +103,14 @@ html, body {
 
 #last .poe {
     position: absolute;
-    top: 50%;
+    top: 40vh;
     left: 50%;
     -ms-transform: translate(-50%,-50%);
     -webkit-transform : translate(-50%,-50%);
     transform : translate(-50%,-50%);
     font-family: 'Londrina Outline', cursive,"Sawarabi Mincho";
-    font-size: 10px;
+    font-size: 3.5vw;
+    width: 85%;
 }
 
 #last .poe p {
