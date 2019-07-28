@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["notfound"],{"2a31":function(n,e,t){"use strict";t.r(e);var u=function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("div")},l=[],o=t("2877"),a={},c=Object(o["a"])(a,u,l,!1,null,null,null);e["default"]=c.exports}}]);
+//# sourceMappingURL=notfound.274eeebc.js.map
