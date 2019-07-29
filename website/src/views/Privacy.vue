@@ -12,8 +12,14 @@
 
 <style lang="scss">
 .privacy {
-    width: 70%;
+    width: 60%;
     height: 30%;
-    margin: 20% auto; 
+    margin: 25vh 20vw;
+    h1 {
+        font-size: 3vw;
+    }
+    p{
+        font-size: 1vw;
+    }
 }
 </style>

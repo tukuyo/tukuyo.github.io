@@ -5,7 +5,7 @@
       <p>めちゃめちゃお世話になっております．すごく出来る方</p>
     </li>
     <li>
-      <a href="https://taguwa.com/">たぐわの家</a>
+      <a href="http://taguwa.com/">たぐわの家</a>
       <p>同期</p>
     </li>
   </ul>

@@ -23,6 +23,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "links" */ './views/Acquaintances.vue')
     },
     {
+      path: '/NewYear',
+      name: 'NYD',
+      component: () => import(/* webpackChunkName: "NYD" */ './views/NewYear.vue')
+    },
+    {
       path: '*',
       name: '404',
       component: () => import(/* webpackChunkName: "notfound" */ './views/Notfound.vue')

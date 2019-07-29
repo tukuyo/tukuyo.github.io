@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <router-view />
+      <router-view />
 
-    <ul class="etc">
-      <li>
-        <router-link to="/">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/links">Acquaintances</router-link>
-      </li>
-      <li>
-        <router-link to="/privacy">Privacy Policy</router-link>
-      </li>
-    </ul>
+      <ul class="etc">
+        <li>
+          <router-link to="/">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/links">Acquaintances</router-link>
+        </li>
+        <li>
+          <router-link to="/privacy">Privacy Policy</router-link>
+        </li>
+      </ul>  
+
   </div>
 </template>
 
@@ -35,29 +36,25 @@ html, body {
 }
 
 body {
-display: flex;
-flex-direction: column;
-background-color: #16a085;
-min-height: 100vh;
-min-width: 100vw;
-font-family: 'Staatliches', cursive;
-background-image: url(./assets/pic/top.jpg);
-background-position: center center;
-background-size: cover;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-
-header {
-  z-index: 2;
-}
-
+  display: flex;
+  flex-direction: column;
+  background-color: #16a085;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: 'Staatliches', cursive;
+  background-image: url(./assets/pic/top.jpg);
+  background-position: center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 header {
   position: absolute;
   height: 100%;
   width: 100%;
+  z-index: 2;
 
   .nav-items {
     list-style: none;
@@ -196,12 +193,38 @@ header {
 }
 
 
-
 label {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
 }
+p {
+    font-family: 'Staatliches', cursive;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.etc {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    bottom: 16px;
+    right: 16px;
+    z-index: 100;
+    li {
+      display: inline;
+      padding: 5px;
+      a, a:visited{
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+}
+
+
 
 header h1 {
   position: absolute;
@@ -216,11 +239,10 @@ header h1 {
   font-family: 'Pacifico', cursive;
   font-size: 4vw;
   color: #000;
-}
-
-header h1 p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+  }
 }
 
 .wrap {
@@ -333,6 +355,10 @@ input {
   transition: 0.2s;
 }
 
+
+
+
+
 .Card {
   width: 100%;
   height: 100%;
@@ -341,57 +367,121 @@ input {
   box-shadow: 0 0 20px #ccc;
   overflow: hidden;
   font-family: 'Josefin Sans', 'Noto Sans JP', serif;
-}
+  h2 {
+    font-size: 4vw;
+    margin: 2% 2% 0 2%;
+    padding: 15px 0 10px 0;
+    border-bottom-style: groove;
+  }
+  .close_button {
+    position: absolute;
+    margin: 15px 15px 15px 95%;
+    .peke {
+      top: 14px;
+      left: 16px;
+      width: 25px;
+      height: 25px;
+    }
+  }
 
-.Card h2 {
-  font-size: 4vw;
-  margin: 2% 2% 0 2%;
-  padding: 15px 0 10px 0;
-  border-bottom-style: groove;
-}
+  // Works
+  .Product {
+    height: 90%;
+    overflow: scroll;
+    p {
+      margin: 5px 30%;
+      height: 100px;
+      text-align: center;
+      overflow: auto;
+      border: groove;
+      border-width: 2px 0 2px 0;
+    }
+    ul {
+      margin: 1% auto;
+      padding: 0;
+      width: 750px;
+      li {
+        position: relative;
+        width: 720px;
+        height: 180px;
+        margin: 10px 15px 0px;
+        list-style-type: none;
+        display: inline-block;
+        float: left;
+        border: solid 2px #000;
+        border-radius: 20px;
+      }
+    }
+  }
 
-.Card .close_button {
-  position: absolute;
-  margin: 15px 15px 15px 95%;
-}
+  // プロフィール
+  .Profile {
+    height: 93%;
+    overflow: scroll;
 
-.Card .close_button .peke {
-  top: 14px;
-  left: 16px;
-  width: 25px;
-  height: 25px;
-}
+    .icon {
+      margin: 5% 25%;
+      text-align: center;
 
-.Card .Product {
-  height: 90%;
-  overflow: scroll;
-}
+      .icon_img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    
+    .nickname,.yomi {
+        text-align: center;
+        letter-spacing: 0.4em;
+        margin-bottom: 0.3em;
+    }
+    .detail {
+      margin: 5% 25%;
+      text-align: center;
+      line-height: 50px;
 
-.Card .Product p {
-  margin: 5px 30%;
-  height: 100px;
-  text-align: center;
-  overflow: auto;
-  border: groove;
-  border-width: 2px 0 2px 0;
-}
+      h3 {
+        margin: 0;
+        font-size: 3vw;
+      }
+    }
+  }
 
-.Card .Product ul {
-  margin: 1% auto;
-  padding: 0;
-  width: 750px;
-}
+  // スキル
+  .sk {
+    height: 93%;
+    overflow: scroll;
+    text-align: center;
+    h1 {
+      padding: 10px 0 10px 0;
+      margin: 10px 0 10px 0;
+    }
+    h2 {
+      font-size: 25px;
+      padding-top: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border: none;   
+    }
+    h3 {
+      font-size: 20px;
+      margin-top: 0px;
+      padding-top: 0px;
+      margin-bottom: 10px;
+    }
 
-.Card .Product ul li {
-  position: relative;
-  width: 720px;
-  height: 180px;
-  margin: 10px 15px 0px;
-  list-style-type: none;
-  display: inline-block;
-  float: left;
-  border: solid 2px #000;
-  border-radius: 20px;
+    .group {
+      text-align: center;
+    }
+    .icon_group {
+      margin: 0 20%;
+      img {
+        width: 80px;
+        height: 80px;
+        margin-right: 3%;
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
 
 .Product ul li a {
@@ -408,24 +498,22 @@ input {
 .product {
   width: 100%;
   height: 100%;
-}
-
-.product img {
-  width: 200px;
-  height: 180px;
-  float: left;
+  img {
+    width: 200px;
+    height: 180px;
+    float: left;
+  }
 }
 
 .detail1 {
   float: left;
   margin: 10px 3.5%;
   width: 65%;
-}
-
-.detail1 h3 {
-  padding-bottom: 5px;
-  border-bottom: dotted 2px #5757579a;
-  margin: 5px 0;
+  h3 {
+    padding-bottom: 5px;
+    border-bottom: dotted 2px #5757579a;
+    margin: 5px 0;
+  }
 }
 
 .detail2 {
@@ -433,84 +521,6 @@ input {
   height: 100%;
   margin-bottom: 5px;
 }
-
-/* Profile */
-
-.Card .Profile {
-  height: 93%;
-  overflow: scroll;
-}
-
-.Card .Profile .icon {
-  margin: 5% 25%;
-  text-align: center;
-}
-
-.Card .Profile .icon .icon_img {
-  width: 200px;
-  height: 200px;
-}
-
-.Card .Profile .nickname, .Card .yomi {
-  text-align: center;
-  letter-spacing: 0.4em;
-  margin-bottom: 0.3em;
-}
-
-.Card .Profile .detail {
-  margin: 5% 25%;
-  text-align: center;
-  line-height: 50px;
-}
-
-.Card .Profile .detail h3 {
-  margin: 0;
-  font-size: 3vw;
-}
-
-
-
-/* .Skills */
-
-.Card .sk {
-  height: 93%;
-  overflow: scroll;
-  text-align: center;
-}
-.sk h1 {
-  padding: 10px 0 10px 0;
-  margin: 10px 0 10px 0;
-}
-.sk h2 {
-  font-size: 25px;
-  padding-top: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: none;   
-}
-.sk h3 {
-  font-size: 20px;
-  margin-top: 0px;
-  padding-top: 0px;
-  margin-bottom: 10px;
-}
-
-.sk .group {
-  text-align: center;
-}
-
-.sk .icon_group {
-  margin: 0 20%;
-}
-
-.icon_group img {
-  width: 80px;
-  height: 80px;
-  margin-right: 3%;
-  margin-bottom: 10px;
-}
-
-
 
 
 .hatena img {
@@ -525,48 +535,193 @@ input {
 /* PC laptop */
 
 @media only screen and (min-width:1380px) {
-  .container .progress {
-      margin: 5% 0 0 10%;
-      width: 500px;
-      float: left;
-  }
   .Card h2 {
       font-family: 'Josefin Sans', 'Noto Sans JP', serif;
       font-size: 50px;
       margin: 2% 2% 0 2%;
       padding: 15px 0 10px 0;
-      border-bottom-style: groove;
+  }
+  .sp {
+    display: none;
   }
 }
 
-p {
-    font-family: 'Staatliches', cursive;
-}
+/* smartphone */
+@media only screen and (max-width:768px) {
+  html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      letter-spacing: 1px;
+      font-family: 'Josefin Sans','Noto Sans JP', serif;
+  }
+  
+  body {
+    background-image: none;
+    background-color: #fff;
+  }
 
-
-
-
-
-
-#app {
-  width: 100%;
-  height: 100%;
-}
-
-.etc {
+  .card {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    padding: 10% 10%;
+    top: 0px;
+    left: 0px;
     position: fixed;
-    margin: 0;
-    padding: 0;
-    bottom: 16px;
-    right: 16px;
-    z-index: 100;
-    li {
-      display: inline;
-      padding: 5px;
-      a, a:visited{
-        color: #fff;
-        text-decoration: none;
+    .job {
+      margin-top: 20px;
+      font-size: 11px;
+      color: rgb(56, 56, 56);
+    }
+    .img {
+        margin: 11%;
+        img {
+          width: 120px;
+          height: 120px;
+          border-radius: 100%;
+        }
+    }
+    .name {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      .nickname {
+        font-size: 18px;
+        letter-spacing: 0.4em;
+        margin-bottom: 0.3em;
+      }
+      .yomi {
+        font-size: 10px;
+        letter-spacing: 0.4em;
+        margin-bottom: 0.3em;
       }
     }
+    text {
+      position: absolute;
+      top: 40vh;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      width: 80%;
+      font-size: 11px;
+      line-height: 1.8em;
+      h3 {
+      margin: 0;
+      }
+    }
+  }
+
+
+
+  #title {
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      background-color: #fff
+  }
+
+  #prof {
+      background-color: #313437;
+      color: #fff;
+  }
+
+  #works {
+    .work {
+        font-size: 18px;
+    }
+    ul {
+      padding-left: 0px;
+      margin-top: 30px;
+      list-style: none;
+      text-align: left;
+      font-size: 15px;
+      li {
+        margin: 10px;
+      }
+    }
+  }
+
+  #last .poe {
+      position: absolute;
+      top: 40vh;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      font-family: 'Londrina Outline', cursive,"Sawarabi Mincho";
+      font-size: 3.5vw;
+      width: 85%;
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9px;
+        color: #adadad;
+      }
+  }
+
+  #scroll {
+    padding-top: 80px;
+    position: relative;
+    bottom: -200px;
+    span {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      margin-left: -12px;
+      border-left: 1px solid #000;
+      border-bottom: 1px solid #000;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      -webkit-animation: sdb 2s infinite;
+      animation: sdb 2s infinite;
+      opacity: 0;
+      box-sizing: border-box;
+    }
+    span:nth-of-type(1) {
+      -webkit-animation-delay: 0s;
+      animation-delay: 0s;
+    }
+    span:nth-of-type(2) {
+      top: 16px;
+      -webkit-animation-delay: .15s;
+      animation-delay: .15s;
+    }
+
+    span:nth-of-type(3) {
+      top: 32px;
+      -webkit-animation-delay: .3s;
+      animation-delay: .3s;
+    }
+  }
+
+  @-webkit-keyframes sdb {
+      0% {
+          opacity: 0;
+      }
+      50% {
+          opacity: 1;
+      }
+      100% {
+          opacity: 0;
+      }
+  }
+
+  @keyframes sdb {
+      0% {
+          opacity: 0;
+      }
+      50% {
+          opacity: 1;
+      }
+      100% {
+          opacity: 0;
+      }
+  }
 }
+
 </style>
+
+

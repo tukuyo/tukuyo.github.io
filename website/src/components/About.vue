@@ -8,7 +8,7 @@
                 年齢：{{ age }}歳<br>
                 性別：男<br>
                 出身：滋賀県<br>
-                現在：{{info}}<br>
+                職業：{{ occupation }}<br>
                 趣味：音楽鑑賞，プログラミング，ゲーム，国内旅行，ギター<br>
                 <br>
             </p>
@@ -25,15 +25,15 @@
 
 
 <script>
+const birthYear = 1996;
+const Month = 8;
+const Day = 9;
+
 export default {
     data () {
-        const birthYear = 1996;
-        const Month = 8;
-        const Day = 9;
         return {
-            birthYear,Month,Day,
             age: 0,
-            info: 'none'
+            occupation: '学生 (大学院)'
         }
     },
     methods: {
@@ -42,8 +42,8 @@ export default {
             var year = today.getFullYear();
             var month = today.getMonth();
             var day = today.getDate();
-            this.age = year - this.Year;
-            if(month < this.Month || month == this.Month && day < this.Day)
+            this.age = year - birthYear;
+            if(month < Month || month == Month && day < Day)
                 this.age -= 1;
         }
     },

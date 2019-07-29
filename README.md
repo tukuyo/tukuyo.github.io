@@ -11,6 +11,6 @@ https://www.tukuyo.net/
  - Vue-cli 3
  - HTML
  - CSS
- - Flask (API Server)
+ - Google App Script (API Serverとして)
 
 
