@@ -37,35 +37,3 @@
         </div>
     </div>
 </template>
-
-<style lang="scss">
-.Contact {
-    .Card {
-        p {
-            margin-top: 10%;
-            margin-bottom: 10%;
-            text-align: center;
-        }
-        img {
-            width: 100px;
-            height: 100px;
-        }
-        .icon_group{
-            width: 73%;
-            margin: 30px auto;
-            text-align: center;
-            a {
-                img {
-                    width:100px;
-                    height: 100px;
-                    margin: 0 1vw 1vh 1vw;
-                }
-
-            }
-        }
-    }
-}
-
-
-
-</style>

@@ -16,8 +16,8 @@
             <p>中学の時からプログラミングに興味を持ち，<br>
                 高校から情報系を専攻<br>
             </p>
-            <h3>mind</h3>
-            <p>"とにかく楽しむ"
+            <h3 v-on:click="hidden">mind</h3>
+            <p>{{ mind }}
             </p>
         </div>
     </div>
@@ -28,12 +28,15 @@
 const birthYear = 1996;
 const Month = 8;
 const Day = 9;
+const poe = ["天気予報士が明日雨だと伝えても，\n貴方の明日は晴れますように．","Everythig begin with 'Hello'.","Code wins arguments."];
 
 export default {
     data () {
         return {
             age: 0,
-            occupation: '学生 (大学院)'
+            occupation: "学生 (大学院)",
+            mind: "’とにかく楽しむ'",
+            click: 0
         }
     },
     methods: {
@@ -45,6 +48,15 @@ export default {
             this.age = year - birthYear;
             if(month < Month || month == Month && day < Day)
                 this.age -= 1;
+        },
+        hidden() {
+            if(this.click < 4){
+                this.click++;
+                return 0;
+            } else if (this.click == 4) {
+                this.mind = poe[Math.floor(Math.random() * Math.floor(3))];
+                this.click++;
+            }
         }
     },
     created: function() {
