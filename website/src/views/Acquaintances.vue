@@ -1,6 +1,6 @@
 <template>
     <div class="acquaintances">
-        <h1>Acquaintances’ websites</h1>
+        <h1>Acquaintance’s websites</h1>
         <websites />
     </div>
 </template>

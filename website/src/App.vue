@@ -286,9 +286,9 @@ input {
   margin: 10px 3.5%;
   width: 65%;
   h3 {
-    padding-bottom: 5px;
+    padding: 5px 0 5px 0;
     border-bottom: dotted 2px #5757579a;
-    margin: 5px 0;
+    margin: 0 0 5px 0;
   }
 }
 
@@ -727,18 +727,22 @@ input {
       }
     }
     .Product {
+      width: 90%;
       position: relative;
+      margin: 2% auto;
       ul {
         width:100%;
         position: absolute;
+        margin: 2% auto;
         li {
           width: 90%;
           height: 100%;
           text-align: center;
+          margin: 5px 5%;
           .product {
             img {
               width: 100%;
-              height: 60%
+              height: 60%;
             }
             .detail1 {
               width:93%;

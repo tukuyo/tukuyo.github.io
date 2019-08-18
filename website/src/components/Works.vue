@@ -4,7 +4,7 @@
             <li v-for="item in works" v-bind:key="item.id">
                 <a :href="item.url"></a>
                 <div class="product">
-                    <img :src="item.pic" class="back" v-on:load="load">
+                    <img :src="item.pic" class="back" >
                     <div class="detail1">
                         <h3>{{ item.name }}</h3>
                         <div class="detail2">
@@ -28,7 +28,7 @@ export default {
         return {
             works: null,
             loadNum: 0,
-            loading: true
+            loading: false
         }
     },
     created() {
