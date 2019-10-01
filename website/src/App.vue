@@ -6,9 +6,6 @@
           <router-link to="/">Home</router-link>
         </li>
         <li>
-          <router-link to="/links">Acquaintances</router-link>
-        </li>
-        <li>
           <router-link to="/privacy">Privacy Policy</router-link>
         </li>
       </ul>  
@@ -157,7 +154,6 @@ input {
         margin: 10px 15px 0px;
         list-style-type: none;
         display: inline-block;
-        float: left;
         border: solid 2px #000;
         border-radius: 20px;
       }
@@ -221,6 +217,7 @@ input {
 
     .group {
       text-align: center;
+      margin-bottom: 3%;
     }
     .icon_group {
       margin: 0 20%;

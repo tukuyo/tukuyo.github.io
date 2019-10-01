@@ -10,9 +10,10 @@
 
 <style lang="scss">
 .notfound {
-    width: 70%;
+    width: 50%;
     height: 30%;
-    margin: 20% auto; 
+    margin: 30vh auto; 
+    font-size: 2vh;
     a, a:visited {
         width: 100%;
         height: 20px;
