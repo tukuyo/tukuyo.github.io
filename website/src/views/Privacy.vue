@@ -22,4 +22,20 @@
         font-size: 1vw;
     }
 }
+
+
+/* smartphone */
+@media only screen and (max-width:768px) {
+.privacy {
+    width: 70%;
+    height: 30%;
+    margin: 25vh 15vw;
+    h1 {
+        font-size: 5vw;
+    }
+    p{
+        font-size: 3vw;
+    }
+}
+}
 </style>

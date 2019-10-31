@@ -16,27 +16,32 @@
                 </div>
             </li>
         </ul>
-        <div class="cover" v-show="loading">
-            <div class="loader">Loading</div>
-        </div>
+        <infinite-loading @infinite="infiniteHandler"></infinite-loading>
     </div>
 </template>
 
 <script>
+import InfiniteLoading from 'vue-infinite-loading'
+import axios from 'axios'
+
+const api = "https://script.google.com/macros/s/AKfycbzMaJHkwQXEmEDNO4GNNvEZDBWWWca5ZoL_b697X27gf54J6g/exec"
 export default {
+    components: {
+        InfiniteLoading
+    },
     data() {
         return {
             works: null,
-            loadNum: 0,
+            loadNum: 5,
             loading: false
         }
     },
     created() {
-        fetch("https://script.google.com/macros/s/AKfycbzMaJHkwQXEmEDNO4GNNvEZDBWWWca5ZoL_b697X27gf54J6g/exec")
+        fetch(api + "?current=0&num=5")
         .then(res => res.json())
         .then(
             result => {
-                this.works = result
+                this.works = result;
             },
             error => {
                 return error;
@@ -44,11 +49,23 @@ export default {
         );
     },
     methods: {
-        load() {
-            this.loadNum++;
-            if(this.loadNum == this.works.length){
-                this.loading = false;
-            }
+        infiniteHandler($state) {
+            axios.get(api, {
+                params: {
+                    current: this.loadNum,
+                    num: 5,
+                }
+            }).then(({ data }) => {
+                if(data.length){
+                    this.loadNum += 5;
+                    this.works.push(...data);
+                    $state.loaded();
+                } else {
+                    $state.complete();
+                }
+            }).catch(() => {
+                $state.complete();
+            });
         }
     }
 }

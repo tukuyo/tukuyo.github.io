@@ -4,6 +4,7 @@
         <div class="nickname">つくよ</div>
         <div class="yomi">tukuyo</div>
         <div class="detail">
+            <h3>Profile</h3>
             <p>
                 年齢：{{ age }}歳<br>
                 性別：男<br>
@@ -13,8 +14,11 @@
                 <br>
             </p>
             <h3>history</h3>
-            <p>中学の時からプログラミングに興味を持ち，<br>
-                高校から情報系を専攻<br>
+            <p class='none'>
+                中学の時からVBScriptでプログラミングに興味を持ち，<br>
+                高校から情報系を専攻．<br>
+                大学では，Unity,Kinectを用いた研究を行い．<br>
+                大学院では，Unityを用いてVRに関する研究を行っている，
             </p>
             <h3 v-on:click="hidden">mind</h3>
             <p>{{ mind }}
@@ -64,3 +68,65 @@ export default {
     }
 }
 </script>
+
+
+<style lang="scss">
+// プロフィール
+  .Profile {
+    height: 93%;
+    overflow: scroll;
+
+    .icon {
+      margin: 5% 25%;
+      text-align: center;
+
+      .icon_img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    
+    .nickname,.yomi {
+        text-align: center;
+        letter-spacing: 0.4em;
+        margin-bottom: 0.3em;
+    }
+    .detail {
+      margin: 5% 25%;
+      line-height: 50px;
+
+      h3 {
+        margin: 0;
+        font-size: 3vw;
+        border-bottom: solid 1px #0e0e0e;
+      }
+    }
+  }
+.none {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
+/* smartphone */
+@media only screen and (max-width:768px) {
+    .Profile {
+      .icon {
+        .icon_img {
+          width: 80%;
+          height: 20%;
+        }
+      }
+      .detail {
+        margin: 5% 10%;
+        p {
+          line-height: 8vw;
+        }
+        h3 {
+          font-size: 5vw;
+        }
+      }
+    }
+}
+</style>

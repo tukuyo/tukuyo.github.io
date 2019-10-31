@@ -160,37 +160,7 @@ input {
     }
   }
 
-  // プロフィール
-  .Profile {
-    height: 93%;
-    overflow: scroll;
-
-    .icon {
-      margin: 5% 25%;
-      text-align: center;
-
-      .icon_img {
-        width: 200px;
-        height: 200px;
-      }
-    }
-    
-    .nickname,.yomi {
-        text-align: center;
-        letter-spacing: 0.4em;
-        margin-bottom: 0.3em;
-    }
-    .detail {
-      margin: 5% 25%;
-      text-align: center;
-      line-height: 50px;
-
-      h3 {
-        margin: 0;
-        font-size: 3vw;
-      }
-    }
-  }
+  
 
   // スキル
   .sk {
@@ -275,6 +245,10 @@ input {
     width: 200px;
     height: 180px;
     float: left;
+  }
+  h1 {
+    padding: 8% 0;
+    text-align: center;
   }
 }
 
@@ -706,23 +680,6 @@ input {
         padding-left: 0;
       }
     }
-    .Profile {
-      .icon {
-        .icon_img {
-          width: 80%;
-          height: 20%;
-        }
-      }
-      .detail {
-        margin: 5% 15%;
-        p {
-          line-height: 8vw;
-        }
-        h3 {
-          font-size: 5vw;
-        }
-      }
-    }
     .Product {
       width: 90%;
       position: relative;
@@ -857,7 +814,8 @@ input {
 
   .etc {
     bottom: 16px;
-    left: 19vw;
+    text-align: center;
+    width: 90%;
     z-index: 100;
     li {
       a, a:visited{
