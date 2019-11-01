@@ -11,7 +11,7 @@
                             {{ item.detail }}    
                         </div>
                         <div class="detail2">{{ "使用：" + item.used }}</div>
-                        <div class="detail2">制作期間：{{ item.term }}</div>
+                        <div class="detail2">制作期間：{{ item.term }} | 公開日：{{ item.date | date }}</div>
                     </div>
                 </div>
             </li>
@@ -57,8 +57,8 @@ export default {
                 }
             }).then(({ data }) => {
                 if(data.length){
-                    this.loadNum += 5;
                     this.works.push(...data);
+                    this.loadNum += 5;
                     $state.loaded();
                 } else {
                     $state.complete();
@@ -66,7 +66,17 @@ export default {
             }).catch(() => {
                 $state.complete();
             });
-        }
+        },
+    },
+    filters: {
+        date: function(tmp){
+            var format = 'YYYY年MM月DD日';
+            var date = new Date(tmp);
+            format = format.replace(/YYYY/, date.getFullYear());
+            format = format.replace(/MM/, date.getMonth() + 1);
+            format = format.replace(/DD/, date.getDate());
+            return format;
+        },
     }
 }
 </script>

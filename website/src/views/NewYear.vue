@@ -34,8 +34,6 @@
     </div>
 </template>
 
-
-
 <style lang="scss">
 
 @import url(https://fonts.googleapis.com/css?family=Sawarabi+Mincho);
@@ -65,8 +63,9 @@ html,body {
 
 .header h2 {
     position: absolute;
-    margin-right    : 15px;
+    margin-right: 15px;
     top: 5vh;
+    right: 3vw;
     font-family: 'hkgyong';
     writing-mode: vertical-rl;
 }
@@ -259,6 +258,9 @@ html,body {
     .footer {
         font-size: 15px;
         color: #000;
+    }
+    .etc {
+        display: none;
     }
 }
 

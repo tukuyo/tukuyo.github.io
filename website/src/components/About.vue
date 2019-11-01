@@ -5,23 +5,24 @@
         <div class="yomi">tukuyo</div>
         <div class="detail">
             <h3>Profile</h3>
-            <p>
+            <p class='none'>
                 年齢：{{ age }}歳<br>
                 性別：男<br>
                 出身：滋賀県<br>
                 職業：{{ occupation }}<br>
                 趣味：音楽鑑賞，プログラミング，ゲーム，国内旅行，ギター<br>
-                <br>
             </p>
-            <h3>history</h3>
+            <h3>History</h3>
             <p class='none'>
                 中学の時からVBScriptでプログラミングに興味を持ち，<br>
                 高校から情報系を専攻．<br>
                 大学では，Unity,Kinectを用いた研究を行い．<br>
-                大学院では，Unityを用いてVRに関する研究を行っている，
+                現在は，Unityを用いてVRに関する研究を行っているが，<br>
+                興味がありよく勉強しているのは，Web, iOS, 画像処理, 機械学習などである．
             </p>
-            <h3 v-on:click="hidden">mind</h3>
-            <p>{{ mind }}
+            <h3 v-on:click="hidden">Mind</h3>
+            <p class='none'>
+              {{ mind }}
             </p>
         </div>
     </div>
@@ -72,36 +73,36 @@ export default {
 
 <style lang="scss">
 // プロフィール
-  .Profile {
-    height: 93%;
-    overflow: scroll;
+.Profile {
+  height: 93%;
+  overflow: scroll;
 
-    .icon {
-      margin: 5% 25%;
-      text-align: center;
+  .icon {
+    margin: 5% 25%;
+    text-align: center;
 
-      .icon_img {
-        width: 200px;
-        height: 200px;
-      }
-    }
-    
-    .nickname,.yomi {
-        text-align: center;
-        letter-spacing: 0.4em;
-        margin-bottom: 0.3em;
-    }
-    .detail {
-      margin: 5% 25%;
-      line-height: 50px;
-
-      h3 {
-        margin: 0;
-        font-size: 3vw;
-        border-bottom: solid 1px #0e0e0e;
-      }
+    .icon_img {
+      width: 200px;
+      height: 200px;
     }
   }
+  
+  .nickname,.yomi {
+      text-align: center;
+      letter-spacing: 0.4em;
+      margin-bottom: 0.3em;
+  }
+  .detail {
+    margin: 5% 25%;
+    line-height: 50px;
+
+    h3 {
+      margin: 0;
+      font-size: 3vw;
+      border-bottom: solid 1px #0e0e0e;
+    }
+  }
+}
 .none {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

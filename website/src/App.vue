@@ -159,46 +159,6 @@ input {
       }
     }
   }
-
-  
-
-  // スキル
-  .sk {
-    height: 93%;
-    overflow: scroll;
-    text-align: center;
-    h1 {
-      padding: 10px 0 10px 0;
-      margin: 10px 0 10px 0;
-    }
-    h2 {
-      font-size: 25px;
-      padding-top: 10px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      border: none;   
-    }
-    h3 {
-      font-size: 20px;
-      margin-top: 0px;
-      padding-top: 0px;
-      margin-bottom: 10px;
-    }
-
-    .group {
-      text-align: center;
-      margin-bottom: 3%;
-    }
-    .icon_group {
-      margin: 0 20%;
-      img {
-        width: 80px;
-        height: 80px;
-        margin-right: 3%;
-        margin-bottom: 10px;
-      }
-    }
-  }
 }
 .Contact {
     .Card {
@@ -816,7 +776,7 @@ input {
     bottom: 16px;
     text-align: center;
     width: 90%;
-    z-index: 100;
+    z-index: 1;
     li {
       a, a:visited{
         font-size: 1.5vh;

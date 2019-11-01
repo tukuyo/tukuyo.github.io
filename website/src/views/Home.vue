@@ -86,13 +86,10 @@
 
 
 <script>
-// @ is an alias to /src
 import Works from '@/components/Works.vue'
 import About from '@/components/About.vue'
 import Skills from '@/components/Skills.vue'
 import Contact from '@/components/Contact.vue'
-import isMobile from 'ismobilejs'
-
 
 export default {
   name: 'home',
@@ -108,18 +105,12 @@ export default {
       year: 0
     }
   },
+  created: function() {
+    this.isNYD();
+    this.copyRight();
+  },
   methods:{
-    isLaptop() {
-      var isSmartPhone = isMobile.phone;
-      var isTablet = isMobile.tablet;
-      if(isTablet){
-        this.laptop = true
-      } else {
-        if(isSmartPhone) {
-          this.laptop = false;
-        }
-      }
-    },
+    // 元旦のみ表示する為の関数
     isNYD(){
       var month = new Date().getMonth()+1;
       var day = new Date().getDate();
@@ -132,14 +123,6 @@ export default {
       this.year = new Date().getFullYear();
     }
   },
-  created: function() {
-    this.isNYD();
-    this.isLaptop();
-    this.copyRight();
-    this.$watch('url', function(now, old) {
-    //例えば読み込み中をしらせるアニメーションなどを要素にかぶせて表示
-    console.log(now + old);
-});
-  }
+  
 }
 </script>
