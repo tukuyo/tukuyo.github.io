@@ -2,11 +2,11 @@
     <div class="Product">
         <ul class="Product-list">
             <li v-for="item in works" v-bind:key="item.id">
-                <a :href="item.url"></a>
+                <a :href="item.url" v-if="item.url"></a>
                 <div class="product">
                     <img :src="item.pic" class="back" >
                     <div class="detail1">
-                        <h3>{{ item.name }}</h3>
+                        <h3>{{ item.name }}  <v-fa :icon="[item.prefix,item.icon]" v-if="item.prefix" /></h3>
                         <div class="detail2">
                             {{ item.detail }}    
                         </div>
@@ -81,3 +81,30 @@ export default {
 }
 </script>
 
+<style lang="scss">
+// Works
+.Product {
+height: 90%;
+overflow: scroll;
+p {
+    margin: 10px 0;
+    text-align: center;
+}
+ul {
+    margin: 1% auto;
+    padding: 0;
+    width: 750px;
+    li {
+    position: relative;
+    width: 720px;
+    height: 180px;
+    margin: 10px 15px 0px;
+    list-style-type: none;
+    display: inline-block;
+    border: solid 2px #000;
+    border-radius: 20px;
+    }
+}
+}
+
+</style>

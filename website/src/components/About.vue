@@ -14,11 +14,11 @@
             </p>
             <h3>History</h3>
             <p class='none'>
-                中学の時からVBScriptでプログラミングに興味を持ち，<br>
+                小学生の時から，メモ帳でのVBScriptなどでプログラミングに興味を持ち，<br>
                 高校から情報系を専攻．<br>
-                大学では，Unity,Kinectを用いた研究を行い．<br>
-                現在は，Unityを用いてVRに関する研究を行っているが，<br>
-                興味がありよく勉強しているのは，Web, iOS, 画像処理, 機械学習などである．
+                大学では，Unity,Kinectを用いた研究を行い，<br>
+                現在は，Unityを用いてVRに関する研究を行っている．<br>
+                趣味として勉強しているのは，Web, iOS, 画像処理など
             </p>
             <h3 v-on:click="hidden">Mind</h3>
             <p class='none'>

@@ -131,34 +131,6 @@ input {
     }
   }
 
-  // Works
-  .Product {
-    height: 90%;
-    overflow: scroll;
-    p {
-      margin: 5px 30%;
-      height: 100px;
-      text-align: center;
-      overflow: auto;
-      border: groove;
-      border-width: 2px 0 2px 0;
-    }
-    ul {
-      margin: 1% auto;
-      padding: 0;
-      width: 750px;
-      li {
-        position: relative;
-        width: 720px;
-        height: 180px;
-        margin: 10px 15px 0px;
-        list-style-type: none;
-        display: inline-block;
-        border: solid 2px #000;
-        border-radius: 20px;
-      }
-    }
-  }
 }
 .Contact {
     .Card {
