@@ -10,7 +10,7 @@
                 </a>
             
             
-                <a href="https://www.instagram.com/tukuyon/" class="instagram">
+                <a href="https://www.instagram.com/tukuyo____/" class="instagram">
                     <img src="../assets/pic/instagram.svg" alt="instagram">
                 </a>
             
