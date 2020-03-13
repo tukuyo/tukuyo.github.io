@@ -16,7 +16,9 @@
                 </div>
             </li>
         </ul>
+
         <infinite-loading @infinite="infiniteHandler"></infinite-loading>
+
     </div>
 </template>
 
@@ -31,22 +33,10 @@ export default {
     },
     data() {
         return {
-            works: null,
-            loadNum: 5,
+            works: [],
+            loadNum: 0,
             loading: false
         }
-    },
-    created() {
-        fetch(api + "?current=0&num=5")
-        .then(res => res.json())
-        .then(
-            result => {
-                this.works = result;
-            },
-            error => {
-                return error;
-            },
-        );
     },
     methods: {
         infiniteHandler($state) {
@@ -56,9 +46,11 @@ export default {
                     num: 5,
                 }
             }).then(({ data }) => {
+                console.log(this.loadNum, 5)
+                console.log(data);
                 if(data.length){
                     this.works.push(...data);
-                    this.loadNum += 5;
+                    this.loadNum += data.length;
                     $state.loaded();
                 } else {
                     $state.complete();

@@ -20,10 +20,13 @@
                 </a>
             
             
-                <a href="http://blog.tukuyo.net/" class="hatena">
+                <a href="https://blog.tukuyo.net/" class="hatena">
                     <img src="../assets/pic/hatena.svg" alt="hatena">
                 </a>
-            
+
+                <a href="https://qiita.com/tukutuku_tukuyo" class="qiita">
+                    <img src="../assets/pic/qiita.svg" alt="qiita">
+                </a>
             
                 <a href="mailto:tukuyo.dayo@gmail.com" class="mail">
                     <img src="../assets/pic/mail.svg" alt="mail">
