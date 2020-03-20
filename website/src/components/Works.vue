@@ -46,8 +46,6 @@ export default {
                     num: 5,
                 }
             }).then(({ data }) => {
-                console.log(this.loadNum, 5)
-                console.log(data);
                 if(data.length){
                     this.works.push(...data);
                     this.loadNum += data.length;
