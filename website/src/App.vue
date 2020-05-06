@@ -38,9 +38,6 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   font-family: 'Staatliches', cursive;
-  background-image: url(./assets/pic/top.jpg);
-  background-position: center center;
-  background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

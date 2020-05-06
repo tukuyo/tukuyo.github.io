@@ -83,8 +83,6 @@
   </div>
 </template>
 
-
-
 <script>
 import Works from '@/components/Works.vue'
 import About from '@/components/About.vue'
@@ -123,6 +121,5 @@ export default {
       this.year = new Date().getFullYear();
     }
   },
-  
-}
+  }
 </script>
