@@ -28,7 +28,6 @@
       </nav>
       <h1>
         tukuyo's website
-        <p>&copy;{{ year }} tukuyo.</p>
       </h1>
     </header>
 
@@ -100,12 +99,10 @@ export default {
   data() {
     return {
       laptop: true,
-      year: 0
     }
   },
   created: function() {
     this.isNYD();
-    this.copyRight();
   },
   methods:{
     // 元旦のみ表示する為の関数
@@ -117,9 +114,6 @@ export default {
         this.$forceUpdate();
       }
     },
-    copyRight(){
-      this.year = new Date().getFullYear();
-    }
   },
   }
 </script>

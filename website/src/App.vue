@@ -2,6 +2,7 @@
   <div id="app">
       <router-view />
       <ul class="etc">
+        <li class="copylight">&copy;{{ year }} tukuyo.</li>
         <li>
           <router-link to="/">Home</router-link>
         </li>
@@ -87,10 +88,14 @@ header h1 {
   font-family: 'Pacifico', cursive;
   font-size: 4vw;
   color: #000;
-  p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-  }
+}
+
+.copylight {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  text-align: center;
+  color: #000;
 }
 
 input {
@@ -756,4 +761,29 @@ input {
 
 </style>
 
-
+<script>
+export default {
+  data() {
+    return {
+      year: 0
+    }
+  },
+  created: function() {
+    this.copyRight();
+  },
+  methods:{
+    // 元旦のみ表示する為の関数
+    isNYD(){
+      var month = new Date().getMonth()+1;
+      var day = new Date().getDate();
+      if(month == 1 && day == 1){
+        window.location = "/NewYear"
+        this.$forceUpdate();
+      }
+    },
+    copyRight(){
+      this.year = new Date().getFullYear();
+    }
+  },
+  }
+</script>
