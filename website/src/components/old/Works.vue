@@ -71,30 +71,109 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+* {
+  overflow: hidden;
+}
+
 // Works
 .Product {
 height: 90%;
 overflow: scroll;
-p {
+  p {
     margin: 10px 0;
     text-align: center;
-}
-ul {
+  }
+  ul {
     margin: 1% auto;
     padding: 0;
     width: 750px;
     li {
-    position: relative;
-    width: 720px;
-    height: 180px;
-    margin: 10px 15px 0px;
-    list-style-type: none;
-    display: inline-block;
-    border: solid 2px #000;
-    border-radius: 20px;
+      position: relative;
+      width: 720px;
+      height: 180px;
+      margin: 10px 15px 0px;
+      list-style-type: none;
+      display: inline-block;
+      border: solid 2px #000;
+      border-radius: 20px;
+      a {
+        text-decoration: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-indent: -999px;
+        z-index: 2;
+      }
     }
+  }
 }
+
+.product {
+  width: 100%;
+  height: 100%;
+  img {
+    width: 200px;
+    height: 180px;
+    float: left;
+  }
+  h1 {
+    padding: 8% 0;
+    text-align: center;
+  }
+}
+
+.detail1 {
+  float: left;
+  margin: 10px 3.5%;
+  width: 65%;
+  h3 {
+    padding: 5px 0 5px 0;
+    border-bottom: dotted 2px #5757579a;
+    margin: 0 0 5px 0;
+  }
+}
+
+.detail2 {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 5px;
+}
+
+
+@media only screen and (max-width:768px) {
+  .Product {
+    width: 90%;
+    position: relative;
+    margin: 2% auto;
+    ul {
+      width:100%;
+      position: absolute;
+      margin: 2% auto;
+      li {
+        width: 90%;
+        height: 100%;
+        text-align: center;
+        margin: 5px 5%;
+        .product {
+          img {
+            width: 100%;
+            height: 60%;
+          }
+          .detail1 {
+            width:93%;
+            h3 {
+              padding-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+    
 }
 
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="Profile">
-        <div class="icon"><img src="../assets/pic/icon.png" alt="tukuyo" class="icon_img"></div>
+        <div class="icon"><img src="../../assets/pic/icon.png" alt="tukuyo" class="icon_img"></div>
         <div class="nickname">つくよ</div>
         <div class="yomi">tukuyo</div>
         <div class="detail">
@@ -71,7 +71,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 // プロフィール
 .Profile {
   height: 93%;

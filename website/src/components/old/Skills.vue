@@ -5,76 +5,76 @@
       <div class="group">
         <h2>Often used</h2>
         <div class="icon_group">
-          <img src="../assets/pic/cpp.svg" alt="CPP">
-          <img src="../assets/pic/cs.svg" alt="">
-          <img src="../assets/pic/python.svg" alt="Python">
-          <img src="../assets/pic/swift.svg" alt="swift">
+          <img src="../../assets/pic/cpp.svg" alt="CPP">
+          <img src="../../assets/pic/cs.svg" alt="">
+          <img src="../../assets/pic/python.svg" alt="Python">
+          <img src="../../assets/pic/swift.svg" alt="swift">
         </div>
       </div>
       <div class="group">
         <h2>Sometimes used</h2>
         <div class="icon_group">
-          <img src="../assets/pic/html.svg" alt="html">
-          <img src="../assets/pic/css.svg" alt="css">
-          <img src="../assets/pic/javascript.svg" alt="jabascript">
-          <img src="../assets/pic/ruby.svg" alt="ruby">
-          <img src="../assets/pic/java.svg" alt="java">
+          <img src="../../assets/pic/html.svg" alt="html">
+          <img src="../../assets/pic/css.svg" alt="css">
+          <img src="../../assets/pic/javascript.svg" alt="jabascript">
+          <img src="../../assets/pic/ruby.svg" alt="ruby">
+          <img src="../../assets/pic/java.svg" alt="java">
         </div>
       </div>
       <div class="group">
         <h2>Previously used</h2>
         <div class="icon_group">
-          <img src="../assets/pic/c.svg" alt="C">
+          <img src="../../assets/pic/c.svg" alt="C">
         </div>
       </div>
       <h1>Framework</h1>
       <div class="group">
         <h2>Often used</h2>
         <div class="icon_group">
-          <img src="../assets/pic/vue.svg" alt="">
-          <img src="../assets/pic/flask.svg" alt="">
+          <img src="../../assets/pic/vue.svg" alt="">
+          <img src="../../assets/pic/flask.svg" alt="">
         </div>
       </div>
       <div class="group">
         <h2>Previously used</h2>
         <div class="icon_group">
-          <img src="../assets/pic/rails.svg" alt="">
-          <img src="../assets/pic/django.svg" alt="">
+          <img src="../../assets/pic/rails.svg" alt="">
+          <img src="../../assets/pic/django.svg" alt="">
         </div>
       </div>
       <h1>GameEngine</h1>
       <div class="group">
         <h2>Often used</h2>
         <div class="icon_group">
-          <img src="../assets/pic/unity.svg" alt="unity">
+          <img src="../../assets/pic/unity.svg" alt="unity">
         </div>
       </div>
       <div class="group">
         <h2>Sometimes used</h2>
         <div class="icon_group">
-          <img src="../assets/pic/UnrealEngine.svg" alt="unrealengin">
+          <img src="../../assets/pic/UnrealEngine.svg" alt="unrealengin">
         </div>
       </div>
       <h1>SQL</h1>
       <div class="group">
         <div class="icon_group">
-          <img src="../assets/pic/sqlite.svg" alt="unity">
+          <img src="../../assets/pic/sqlite.svg" alt="unity">
         </div>
       </div>
       <h1>OS</h1>
       <div class="group">
         <h2>Often used</h2>
         <div class="icon_group">
-          <img src="../assets/pic/windows.svg" alt="windows">
-          <img src="../assets/pic/macos.svg" alt="mac">
-          <img src="../assets/pic/centos.svg" alt="centos">
+          <img src="../../assets/pic/windows.svg" alt="windows">
+          <img src="../../assets/pic/macos.svg" alt="mac">
+          <img src="../../assets/pic/centos.svg" alt="centos">
         </div>
       </div>
   </div>
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 // スキル
 .sk {
   height: 93%;

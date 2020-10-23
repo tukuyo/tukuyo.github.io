@@ -1,104 +1,198 @@
 <template>
-  <div class="home">
-    <!-- Button, Top moji -->
-    <header>
-      <nav class="navigation" role="navigation">
-        <ul class="nav-items">
-          <li class="nav-item">
-            <a>
-              <label for="trigger1">Works</label>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a>
-              <label for="trigger2">About</label>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a>
-              <label for="trigger3">Skills</label>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a>
-              <label for="trigger4">Contact</label>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <h1>
-        tukuyo's website
-      </h1>
-    </header>
+  <div id="home">
+    <v-system-bar height="56px" color="indigo darken-4" lights-out dark class="text-center d-flex">
+      <div class="bar-title display-2 md-1 pl-4">{{$t("Home.title")}}</div>
+      <v-spacer></v-spacer>
+      <v-icon medium  color="white">
+        mdi-translate
+      </v-icon>
+      <v-switch color="primary" value @click="chLocale"  inset></v-switch>
+    </v-system-bar>
+    
+    <v-card>
+      <v-row align="center" class="lightbox pa-2 fill-height">
+        <v-card-text class="display-1 text-center mb-0 pb-0">
+            <p>{{$t("About.title")}}</p>
+        </v-card-text>
+        <v-col align="center" cols="12" sm="6" md="6" lg="5">
+          <v-img src="../assets/pic/icon.png" max-height="55%" max-width="55%" contain></v-img>
+        </v-col>
 
-    <!-- Overlapping tiles -->
-    <div class="wrap">
-      <input type="checkbox" id="trigger1">
-      <input type="checkbox" id="trigger2">
-      <input type="checkbox" id="trigger3">
-      <input type="checkbox" id="trigger4">
+        <v-col cols="12" sm="6" md="5" lg="5">
+          <v-card-text class="mb-0 pb-0">
+            <p class="headline mb-0 pb-0">{{$t("About.profile")}}</p>
+          </v-card-text>
+          <v-card-text>
+            <p class="body-1">{{$t("About.text")}}</p>
+            <p class="body-1">{{$t("About.text2")}}</p>
+          </v-card-text>
+          <v-card-text>
+            <p class="headline">{{$t("About.hobby_title")}}</p>  
+            <p class="body-1">{{$t("About.hobby")}}</p>
+          </v-card-text>
+          <v-card-text>
+            <p class="headline">{{$t("About.skills_title")}}</p> 
+            <p class="subtitle-1">{{$t("About.major_skills_title")}}</p> 
+            <ul>
+              <li class="body-1">{{$t("About.major_skills")}}</li>
+            </ul>
+            <p class="subtitle-1 mt-5">{{$t("About.minor_skills_title")}}</p> 
+            <ul>
+              <li class="body-1">python</li>
+              <li class="body-1">html, css, javascript</li>
+              <li class="body-1">vue.js</li>
+              <li class="body-1">firebase</li>
+            </ul>
+            
+            <p class="subtitle-1 mt-5">{{$t("About.other_skills")}}</p> 
+            <ul>
+              <li class="body-1">Final Cut Pro X</li>
+            </ul>
+          </v-card-text>
+          <v-card-text>
+            <p class="headline">{{$t("About.awards")}}</p>  
+            <ul>
+              <li class="body-1">{{$t("About.awards_list")}}</li>
+            </ul>
+          </v-card-text>
+          
+        </v-col>
+        
+      </v-row>
+    </v-card>
 
-      <div class="overlay1">
-        <label for="trigger1" class="overlay_trigger1"></label>
-        <div class="Works">
-          <div class="Card">
-            <label for="trigger1" class="close_button"><img src="../assets/pic/close.svg" class="peke"></label>
-            <h2>Works</h2>
-            <Works />
-          </div>
-        </div>
-      </div>
-      <div class="overlay2">
-        <label for="trigger2" class="overlay_trigger2"></label>
-        <div class="About">
-          <div class="Card">
-            <label for="trigger2" class="close_button"><img src="../assets/pic/close.svg" class="peke"></label>
-            <h2>About</h2>
-            <About />
-          </div>
-        </div>
-      </div>
-      <div class="overlay3">
-        <label for="trigger3" class="overlay_trigger3"></label>
-        <div class="Skills">
-          <div class="Card">
-            <label for="trigger3" class="close_button"><img src="../assets/pic/close.svg" class="peke"></label>
-            <h2>Skills</h2>
-            <Skills />
-          </div>
-        </div>
-      </div>
-      <div class="overlay4">
-        <label for="trigger4" class="overlay_trigger4"></label>
-        <div class="Contact">
-          <div class="Card">
-            <label for="trigger4" class="close_button"><img src="../assets/pic/close.svg" class="peke"></label>
-            <h2>Contact</h2>
-            <Contact />
-          </div>
-        </div>
-      </div>
-    </div>
+    <v-divider></v-divider>
+
+    
+
+    <v-card class="black--text text-center">
+      <v-card-text class="display-2 text-center">
+        <p>{{$t("Works.title")}}</p>
+      </v-card-text>
+      <v-card-text class="body-1 text-center">
+        <p>{{$t("Works.description")}}</p>
+      </v-card-text>
+
+      <v-card-text>
+        <p class="display-1">{{$t("Works.ios_title")}}</p>
+        <v-row>
+          <v-col v-for="(item, index) in app_works" :key="index" cols="12" sm="6" md="4" lg="3">
+            <v-badge overlap :value="item.new" icon="mdi-star" color="green" width="300" height="300">
+              <v-card width="250" height="360" @click="go(item.url)" elevation="6">
+              <v-img :src="item.pic" height="250"></v-img>
+
+              <v-divider></v-divider>
+              <v-card-text>
+                <h2 class="title" v-if="!translate">
+                  {{ item.name }}
+                </h2>
+                <h2 class="title" v-if="translate">
+                  {{ item.name_EN }}
+                </h2>
+              </v-card-text>
+              </v-card>
+            </v-badge>
+          </v-col>
+        </v-row>
+        <v-progress-circular
+          indeterminate
+          color="primary"
+          v-if="loading"
+        ></v-progress-circular>
+      </v-card-text>
+
+      <v-divider></v-divider>
+
+
+      <v-card-text>
+        <p class="display-1 mt-5">{{$t("Works.web_title")}}</p>
+        <v-row>
+        <v-col v-for="(item, index) in web_works" :key="index"  cols="12" sm="6" md="4" lg="3">
+          <v-badge overlap :value="item.new" icon="mdi-star" color="error"  >
+            <v-card width="250" height="360" @click="go(item.url)" elevation="6">
+              <v-img :src="item.pic" height="250"></v-img>
+              <v-divider></v-divider>
+              <v-card-text>
+                <h2 class="title" v-if="!translate">
+                  {{ item.name }}
+                </h2>
+                <h2 class="title" v-if="translate">
+                  {{ item.name_EN }}
+                </h2>
+              </v-card-text>
+            </v-card>
+          </v-badge>
+        </v-col>
+        </v-row>
+        <v-progress-circular
+          indeterminate
+          color="orange"
+          v-if="loading"
+        ></v-progress-circular>
+      </v-card-text>
+
+
+      <v-divider></v-divider>
+
+      <v-card-text>
+        <p class="display-1 mt-5">{{$t("Works.other")}}</p>
+        <v-row>
+          <v-col v-for="(item, index) in other_works" :key="index" cols="12" sm="6" md="4" lg="3">
+            <v-badge overlap :value="item.new" icon="mdi-star" color="green">
+              <v-card width="250" height="360" @click="go(item.url)" elevation="6">
+              <v-img :src="item.pic" height="250"></v-img>
+              <v-divider></v-divider>
+              <v-card-text>
+                <h2 class="title" v-if="!translate">
+                  {{ item.name }}
+                </h2>
+                <h2 class="title" v-if="translate">
+                  {{ item.name_EN }}
+                </h2>
+              </v-card-text>
+              </v-card>
+            </v-badge>
+          </v-col>
+        </v-row>
+        <v-progress-circular
+          indeterminate
+          color="green"
+          v-if="loading"
+        ></v-progress-circular>
+      </v-card-text>
+
+    <infinite-loading @infinite="load" class="noVis"></infinite-loading>
+    </v-card>
+
+    <Footer />
   </div>
 </template>
 
+
+
 <script>
-import Works from '@/components/Works.vue'
-import About from '@/components/About.vue'
-import Skills from '@/components/Skills.vue'
-import Contact from '@/components/Contact.vue'
+import axios from 'axios'
+import Footer from '@/components/Footer.vue'
+import InfiniteLoading from 'vue-infinite-loading'
+
+const api = "https://script.google.com/macros/s/AKfycbzMaJHkwQXEmEDNO4GNNvEZDBWWWca5ZoL_b697X27gf54J6g/exec"
 
 export default {
   name: 'home',
   components: {
-    Works,
-    About,
-    Skills,
-    Contact
+    InfiniteLoading,
+    Footer,
   },
   data() {
     return {
       laptop: true,
+      translate: false,
+      works: [],
+      web_works: [],
+      app_works: [],
+      other_works: [],
+      loadNum: 0,
+      loading: true
     }
   },
   created: function() {
@@ -106,7 +200,7 @@ export default {
   },
   methods:{
     // 元旦のみ表示する為の関数
-    isNYD(){
+    isNYD() {
       var month = new Date().getMonth()+1;
       var day = new Date().getDate();
       if(month == 1 && day == 1){
@@ -114,6 +208,89 @@ export default {
         this.$forceUpdate();
       }
     },
+    chLocale() {
+      this.translate = !this.translate;
+      if(this.translate) {
+        this.$i18n.locale = "en";
+        document.documentElement.setAttribute('lang', 'en')
+      } else {
+        this.$i18n.locale = "ja";
+        document.documentElement.setAttribute('lang', 'jp')
+      } 
+    },
+
+
+    load($state) {
+      axios.get(api, {
+          params: {
+              current: this.loadNum,
+              num: 5,
+          }
+      }).then(({ data }) => {
+          if(data.length){
+              this.works.push(...data);
+              this.loadNum += data.length;
+              this.sortingWorks();
+              $state.loaded();
+          } else {
+              $state.complete();
+              this.loading = false;
+          }
+      }).catch(() => {
+          $state.complete();
+      });
+    },
+    sortingWorks() {
+      this.works.forEach(data => {
+        if(data.type == 'native') this.app_works.push(data);
+        else if(data.type == "web") this.web_works.push(data);
+        else this.other_works.push(data);
+      });
+      this.works.length = 0;
+    },
+    go(url) {
+      location.href = url;
+    }
   },
-  }
+}
 </script>
+
+
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@500');
+
+* {
+  overflow: initial;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: cursive, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  #app {
+    #home {
+      .bar-title {
+        font-family: 'Mali' !important;
+        font-size: min(5vw, 40px) !important;
+        color: white;
+      }
+      .noVis{
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+/* smartphone */
+@media only screen and (max-width:768px) {
+  * {
+    overflow: scroll;
+  }
+}
+
+</style>
