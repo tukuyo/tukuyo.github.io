@@ -14,11 +14,11 @@
         <v-card-text class="display-1 text-center mb-0 pb-0">
             <p>{{$t("About.title")}}</p>
         </v-card-text>
-        <v-col align="center" cols="12" sm="6" md="6" lg="5">
-          <v-img src="../assets/pic/icon.png" max-height="55%" max-width="55%" contain></v-img>
+        <v-col align="center" cols="16" sm="16" md="6" lg="6">
+          <v-img src="../assets/pic/icon.png" max-height="35%" max-width="35%" contain></v-img>
         </v-col>
 
-        <v-col cols="12" sm="6" md="5" lg="5">
+        <v-col cols="16" sm="12" md="6" lg="5">
           <v-card-text class="mb-0 pb-0">
             <p class="headline mb-0 pb-0">{{$t("About.profile")}}</p>
           </v-card-text>
@@ -77,7 +77,7 @@
         <p class="display-1">{{$t("Works.ios_title")}}</p>
         <v-row>
           <v-col v-for="(item, index) in app_works" :key="index" cols="12" sm="6" md="4" lg="3">
-            <v-badge overlap :value="item.new" icon="mdi-star" color="green" width="300" height="300">
+            <v-badge overlap :value="item.new" icon="mdi-star" color="green">
               <v-card width="250" height="360" @click="go(item.url)" elevation="6">
               <v-img :src="item.pic" height="250"></v-img>
 
@@ -283,13 +283,6 @@ body {
         visibility: hidden;
       }
     }
-  }
-}
-
-/* smartphone */
-@media only screen and (max-width:768px) {
-  * {
-    overflow: scroll;
   }
 }
 
