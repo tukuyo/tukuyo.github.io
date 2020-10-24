@@ -30,6 +30,7 @@ export default {
       text: ""
     },
     Privacy: {
+      title: "PrivacyPolicy",
       text: "Privacy Policy",
       text1: "Yoshio Tsukuda promotes the protection of personal information by establishing the personal information protection system, recognizing the importance of protecting personal information, and making thorough efforts to do so.",
       text2: "Management of personal information",

@@ -3,39 +3,16 @@
       <v-row no-gutters>
         <v-flex lg5 md5 sm12 xs12>
           <v-col class="title">
-            <h1>Privacy & Policy<p>プライバシーポリシー</p></h1>
-            <v-btn class="ma-5" v-if="!translate" @click="ch">ENGLISH</v-btn>
-            <v-btn class="ma-5" v-if="translate" @click="ch">JAPANESE</v-btn>
-            <div class="icon_group">
-              <a href="https://twitter.com/tukutuku_tukuyo" class="twitter">
-                  <img src="../assets/pic/twitter.svg" alt="twitter" >
-              </a>
-              <a href="https://www.instagram.com/tukuyo____/" class="instagram">
-                  <img src="../assets/pic/instagram.svg" alt="instagram" >
-              </a>
-          
-          
-              <a href="https://github.com/tukuyo" class="github">
-                  <img src="../assets/pic/github.svg" alt="github" >
-              </a>
-          
-          
-              <a href="https://blog.tukuyo.net/" class="hatena">
-                  <img src="../assets/pic/hatena.svg" alt="hatena" >
-              </a>
-
-              <a href="https://qiita.com/tukutuku_tukuyo" class="qiita">
-                  <img src="../assets/pic/qiita.svg" alt="qiita" >
-              </a>
-          
-              <a href="mailto:tukuyo.dayo@gmail.com" class="mail">
-                  <img src="../assets/pic/mail.svg" alt="mail" >
-              </a>
+            <div class="headline black--text"><p>{{$t("Privacy.title")}}</p></div>
+            <div class="text-right">
+              <v-btn class="ma-1" v-if="!translate" @click="ch">ENGLISH</v-btn>
+              <v-btn class="ma-1" v-if="translate" @click="ch">JAPANESE</v-btn>
             </div>
           </v-col>
         </v-flex>
         <v-flex lg7 md7 sm12 xs12 class="detail">
             <v-card class="detail-polcy">
+              <v-card-text>
               <h1>{{$t("Privacy.text")}}</h1>
               <p>{{$t("Privacy.text1")}}</p>
               <br>
@@ -69,13 +46,29 @@
 
               <h2>{{$t("Privacy.text14")}}</h2>
               <p>{{$t("Privacy.text15")}}<br><br> Yoshio Tsukuda <a href="https://twitter.com/tukutuku_tukuyo">@tukutuku_tukuyo</a></p>
-              <br>
-              <br>
+              </v-card-text>
             </v-card>
         </v-flex>
       </v-row>
-    
 
+    <div class="text-center">
+      <span v-for="icon in icons" :key="icon.img">
+        <v-btn
+          class="ma-3 black--text"
+          icon
+          v-bind="attrs"
+          v-on="on"
+          @click="next(icon.url)"
+        >
+          <v-img :src="icon.img" width="3vw"  />
+        </v-btn>
+      </span>
+    </div>
+    
+    <p class="black--text text-center">
+      <br>
+      @{{ new Date().getFullYear() }} — <strong>tukuyo</strong>
+    </p>
     
   </v-container>
 </template>
@@ -85,10 +78,19 @@
 export default {
   data() {
     return {
+      icons: [
+        {name: "Twitter (@tukutuku_tukuyo)",img: require("../assets/pic/twitter.svg"), url: "https://twitter.com/tukutuku_tukuyo"},
+        {name: "instagram",img: require("../assets/pic/instagram.svg"), url: "https://www.instagram.com/tukuyo____/"},
+        {name: "GitHub (tukuyo)",img: require("../assets/pic/github.svg"), url: "https://github.com/tukuyo"},
+        {name: "Mail",img: require("../assets/pic/mail.svg"), url: "mailto:tukuyo.dayo@gmail.com"},
+      ],
       translate: false,
     }
   },
   methods: {
+    next(url) {
+      location.href = url;
+    },
     ch() {
       this.translate = !this.translate;
       if(this.translate) {
@@ -99,92 +101,6 @@ export default {
         document.documentElement.setAttribute('lang', 'jp')
       } 
     }
-  }
+  },
 }
 </script>
-
-<style lang="scss">
-.privacy {
-  width: 100%;
-  padding-top: 10vh;
-  .title {
-    height: 100;
-    text-align: right;
-    margin-right: 10px;
-    h1 {
-      width: 100%;
-      margin-top: 50%;
-      margin-right: 5%;
-      font-size: 4vw;
-      padding-bottom: 50px;
-    }
-    p{
-      font-size: 1vw;
-    }
-    .icon_group {
-      a {
-        img {
-            width: 30px;
-            height: 30px;
-            margin: 0 0.5vw 1vh 1vw;
-        }
-      }
-    }
-  }
-
-  .detail {
-    text-align: center;
-    .detail-polcy {
-      text-transform: none;
-      text-align: left;
-      display: inline-block;
-      width: 100%;
-      height: 70%;
-      overflow: scroll;
-      border: 1px solid black;
-      padding: 10px 10px  10px 10px;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      p {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
-      }
-    }
-  }
-}
-
-@media (min-width: 960px) {
-  .container {
-    max-width: none;
-  }  
-}
-
-
-
-/* smartphone */
-@media only screen and (max-width:960px) {
-  .privacy {
-    height: 90%;
-    margin-top: 5vh;
-    .row {
-      height: 100%;
-      .title {
-        h1 {
-          font-size: 5vw;
-          margin-top: 0;
-        }
-      }
-      .detail {
-        height: 80%;
-        .detail-polcy {
-          width: 100%;
-          height: 94%;
-          overflow: scroll;
-          border: none;
-          border: 1px solid black;
-          padding: 10px 10px  10px 10px;
-          background-color: #ffffff00;
-        }
-      }
-    }
-  }
-}
-</style>
