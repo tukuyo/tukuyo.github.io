@@ -1,16 +1,14 @@
 <template>
-  <v-container class="grey privacy">
-      <v-row no-gutters>
-        <v-flex lg5 md5 sm12 xs12>
-          <v-col class="title">
-            <div class="headline black--text"><p>{{$t("Privacy.title")}}</p></div>
-            <div class="text-right">
-              <v-btn class="ma-1" v-if="!translate" @click="ch">ENGLISH</v-btn>
-              <v-btn class="ma-1" v-if="translate" @click="ch">JAPANESE</v-btn>
-            </div>
-          </v-col>
-        </v-flex>
-        <v-flex lg7 md7 sm12 xs12 class="detail">
+  <div class="grey privacy">
+      <v-row no-gutters class="ma-5">
+        <v-col cols="12" sm="12" md="5" lg="5">
+          <div class="headline black--text"><p>{{$t("Privacy.title")}}</p></div>
+          <div class="text-right ma-2">
+            <v-btn class="ma-1" v-if="!translate" @click="ch">ENGLISH</v-btn>
+            <v-btn class="ma-1" v-if="translate" @click="ch">JAPANESE</v-btn>
+          </div>
+        </v-col>
+        <v-col cols="12" sm="12" md="7" lg="7">
             <v-card class="detail-polcy">
               <v-card-text>
               <h1>{{$t("Privacy.text")}}</h1>
@@ -48,16 +46,14 @@
               <p>{{$t("Privacy.text15")}}<br><br> Yoshio Tsukuda <a href="https://twitter.com/tukutuku_tukuyo">@tukutuku_tukuyo</a></p>
               </v-card-text>
             </v-card>
-        </v-flex>
+        </v-col>
       </v-row>
 
-    <div class="text-center">
-      <span v-for="icon in icons" :key="icon.img">
+    <div class="text-center mt-5">
+      <span v-for="(icon, iter) in icons" :key="iter">
         <v-btn
           class="ma-3 black--text"
           icon
-          v-bind="attrs"
-          v-on="on"
           @click="next(icon.url)"
         >
           <v-img :src="icon.img" width="3vw"  />
@@ -70,7 +66,7 @@
       @{{ new Date().getFullYear() }} — <strong>tukuyo</strong>
     </p>
     
-  </v-container>
+  </div>
 </template>
 
 

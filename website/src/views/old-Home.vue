@@ -123,7 +123,7 @@ export default {
 </script>
 
 
-<style lang="scss" >
+<style lang="scss" scoped>
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
