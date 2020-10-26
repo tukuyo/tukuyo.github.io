@@ -1,5 +1,10 @@
 # tukuyo's web site
-![deploy vps](https://github.com/tukuyo/tukuyo.github.io/workflows/deploy%20vps/badge.svg)
+![deploy vps](https://github.com/tukuyo/website/workflows/deploy%20vps/badge.svg)  
+
+
+  
+あえてgithub.ioを使わずに
+  
 
 Yoshio Tsukuda  
  - [HP](https://tukuyo.net/)
