@@ -14,12 +14,6 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/old-home',
-      name: 'old-Home',
-      meta: { title: "　OLD HOME | tukuyo's Web Site", desc: '2020/10/30まで使用していたページです．' },
-      component: () => import(/* webpackChunkName: "privacy" */ './views/old-Home.vue')
-    },
-    {
       path: '/privacy-policy',
       name: 'privacy',
       meta: { title: "Privacy & Policy| tukuyo's Web Site", desc: 'ディスクリプションを記述' },

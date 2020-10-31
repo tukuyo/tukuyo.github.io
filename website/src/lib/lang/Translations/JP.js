@@ -2,7 +2,8 @@ export default {
   ja: {
     Home: {
       title: "tukuyo's website",
-      oldHome: "昔のバージョン" 
+      oldHome: "昔のバージョン",
+      Name: "佃 吉央"
     },
     About: {
       title: "プロフィール",
@@ -16,8 +17,9 @@ export default {
       skills_title: "スキル",
       major_skills_title: "専門",
       major_skills: "Unity(C#), Swift, iOS, VR",
-      minor_skills_title: "ちょっとできる",
+      minor_skills_title: "使用している言語&フレームワーク",
       other_skills: "他のスキル",
+      other_SkillsList: "動画編集，ギター",
       awards: "受賞",
       awards_list: "2019年度情報処理学会関西支部 支部大会 奨励賞",
     },
@@ -26,7 +28,8 @@ export default {
       description: "カードをクリックすると別のページへ遷移します．",
       ios_title: "iOS アプリ",
       web_title: "Web アプリ",
-      other: "その他"
+      other: "その他",
+      otherDescription: "クリックするとブログ記事やGitHubなどに遷移します．"
     },
     Footer: {
       text: ""

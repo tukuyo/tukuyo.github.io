@@ -16,6 +16,9 @@
         </v-card-text>
         <v-col align="center" cols="16" sm="16" md="6" lg="6">
           <v-img src="../assets/pic/icon.png" max-height="35%" max-width="35%" contain></v-img>
+          <v-card-text class="display-1 text-center mb-0 pb-0">
+            <p>{{$t("Home.Name")}}</p>
+          </v-card-text>
         </v-col>
 
         <v-col cols="16" sm="12" md="6" lg="5">
@@ -34,10 +37,12 @@
             <p class="headline">{{$t("About.skills_title")}}</p> 
             <p class="subtitle-1">{{$t("About.major_skills_title")}}</p> 
             <ul>
-              <li class="body-1">{{$t("About.major_skills")}}</li>
+              <li class="body-1">iOS</li>
+              <li class="body-1">VR/AR</li>
             </ul>
             <p class="subtitle-1 mt-5">{{$t("About.minor_skills_title")}}</p> 
             <ul>
+              <li class="body-1">Swift</li>
               <li class="body-1">python</li>
               <li class="body-1">html, css, javascript</li>
               <li class="body-1">vue.js</li>
@@ -46,7 +51,7 @@
             
             <p class="subtitle-1 mt-5">{{$t("About.other_skills")}}</p> 
             <ul>
-              <li class="body-1">Final Cut Pro X</li>
+              <li class="body-1">{{$t("About.other_SkillsList")}}</li>
             </ul>
           </v-card-text>
           <v-card-text>
@@ -57,8 +62,8 @@
           </v-card-text>
           
         </v-col>
-        
       </v-row>
+      <infinite-loading @infinite="load" class="noVis"></infinite-loading>
     </v-card>
 
     <v-divider></v-divider>
@@ -69,7 +74,7 @@
       <v-card-text class="display-2 text-center">
         <p>{{$t("Works.title")}}</p>
       </v-card-text>
-      <v-card-text class="body-1 text-center">
+      <v-card-text class="headline text-center">
         <p>{{$t("Works.description")}}</p>
       </v-card-text>
 
@@ -89,6 +94,7 @@
                 <h2 class="title" v-if="translate">
                   {{ item.name_EN }}
                 </h2>
+                <v-fa class="title" :icon="[item.prefix,item.icon]" v-if="item.prefix" />
               </v-card-text>
               </v-card>
             </v-badge>
@@ -115,9 +121,11 @@
               <v-card-text>
                 <h2 class="title" v-if="!translate">
                   {{ item.name }}
+                  <v-fa class="title" :icon="[item.prefix,item.icon]" v-if="item.prefix" />
                 </h2>
                 <h2 class="title" v-if="translate">
                   {{ item.name_EN }}
+                  <v-fa class="title" :icon="[item.prefix,item.icon]" v-if="item.prefix" />
                 </h2>
               </v-card-text>
             </v-card>
@@ -136,6 +144,7 @@
 
       <v-card-text>
         <p class="display-1 mt-5">{{$t("Works.other")}}</p>
+        <p class="headline"> {{ $t("Works.otherDescription")}} </p>
         <v-row>
           <v-col v-for="(item, index) in other_works" :key="index" cols="12" sm="6" md="4" lg="3">
             <v-badge overlap :value="item.new" icon="mdi-star" color="green">
@@ -145,9 +154,11 @@
               <v-card-text>
                 <h2 class="title" v-if="!translate">
                   {{ item.name }}
+                <v-fa class="title" :icon="[item.prefix,item.icon]" v-if="item.prefix" />
                 </h2>
                 <h2 class="title" v-if="translate">
                   {{ item.name_EN }}
+                <v-fa class="title" :icon="[item.prefix,item.icon]" v-if="item.prefix" />
                 </h2>
               </v-card-text>
               </v-card>
@@ -160,8 +171,6 @@
           v-if="loading"
         ></v-progress-circular>
       </v-card-text>
-
-    <infinite-loading @infinite="load" class="noVis"></infinite-loading>
     </v-card>
 
     <Footer />
@@ -186,7 +195,7 @@ export default {
   data() {
     return {
       laptop: true,
-      translate: false,
+      translate: true,
       works: [],
       web_works: [],
       app_works: [],
