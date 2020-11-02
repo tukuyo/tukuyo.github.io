@@ -195,7 +195,7 @@ export default {
   data() {
     return {
       laptop: true,
-      translate: true,
+      translate: false,
       works: [],
       web_works: [],
       app_works: [],
@@ -224,7 +224,7 @@ export default {
         document.documentElement.setAttribute('lang', 'en')
       } else {
         this.$i18n.locale = "ja";
-        document.documentElement.setAttribute('lang', 'jp')
+        document.documentElement.setAttribute('lang', 'ja')
       } 
     },
 

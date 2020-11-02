@@ -23,8 +23,8 @@ Vue.use(VueParallaxJs)
 Vue.use(VueI18n)
 import { data } from '@/lib/lang/index.js'
 const i18n = new VueI18n({
-  locale: 'en', // デフォルト言語設定
-  fallbackLocale: 'ja', // 選択中の言語に対応する文字列が存在しない場合はこの言語の文字列を使用する
+  locale: 'ja', // デフォルト言語設定
+  fallbackLocale: 'en', // 選択中の言語に対応する文字列が存在しない場合はこの言語の文字列を使用する
   messages: data
 })
 

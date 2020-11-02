@@ -7,7 +7,7 @@ export default {
     },
     About: {
       title: "Profile",
-      profile: "About",
+      profile: "About me",
       text: "I'm Yoshio Tsukuda, a master's student of information science in Osaka. When I was an elementary school student, I did some simple programming such as VBScript with Notepad and became interested in programming. Currently, I am doing research on VR (Virtual Reality) in graduate school and also developing iOS native applications as my personal development.",
       text2: "My dream is to develop software that will be used forever.  We're looking forward to working with you :)",
       hobby_title: "Hobby",
