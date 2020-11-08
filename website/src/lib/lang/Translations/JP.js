@@ -3,7 +3,7 @@ export default {
     Home: {
       title: "tukuyo's website",
       oldHome: "昔のバージョン",
-      Name: "佃 吉央"
+      Name: "Yoshio Tsukuda"
     },
     About: {
       title: "プロフィール",
