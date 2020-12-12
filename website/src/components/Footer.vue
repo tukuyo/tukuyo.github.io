@@ -54,7 +54,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="black--text">
-        @{{ new Date().getFullYear() }} — <strong>tukuyo</strong>
+        &copy;{{ new Date().getFullYear() }} — <strong>tukuyo</strong>
       </v-card-text>
     </v-card>
   </v-footer>
