@@ -12,6 +12,7 @@
             <v-card class="detail-polcy">
               <v-card-text>
               <h1>{{$t("Privacy.text")}}</h1>
+              <br>
               <p>{{$t("Privacy.text1")}}</p>
               <br>
               <h2>{{$t("Privacy.text2")}}</h2>
@@ -82,6 +83,9 @@ export default {
       ],
       translate: false,
     }
+  },
+  created: function() {
+    if(this.$i18n.locale === "en") this.ch();
   },
   methods: {
     next(url) {

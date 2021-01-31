@@ -6,7 +6,7 @@
       <v-icon medium  color="white">
         mdi-translate
       </v-icon>
-      <v-switch color="primary" value @click="chLocale"  inset></v-switch>
+      <v-switch color="primary" v-model="translate" @click="chLocale"  inset></v-switch>
     </v-system-bar>
     
     <v-card>
@@ -54,12 +54,6 @@
               <li class="body-1">{{$t("About.other_SkillsList")}}</li>
             </ul>
           </v-card-text>
-          <v-card-text>
-            <p class="headline">{{$t("About.awards")}}</p>  
-            <ul>
-              <li class="body-1">{{$t("About.awards_list")}}</li>
-            </ul>
-          </v-card-text>
           
         </v-col>
       </v-row>
@@ -82,22 +76,7 @@
         <p class="display-1">{{$t("Works.ios_title")}}</p>
         <v-row>
           <v-col v-for="(item, index) in app_works" :key="index" cols="12" sm="6" md="4" lg="3">
-            <v-badge overlap :value="item.new" icon="mdi-star" color="green">
-              <v-card width="250" height="360" @click="go(item.url)" elevation="6">
-              <v-img :src="item.pic" height="250"></v-img>
-
-              <v-divider></v-divider>
-              <v-card-text>
-                <h2 class="title" v-if="!translate">
-                  {{ item.name }}
-                </h2>
-                <h2 class="title" v-if="translate">
-                  {{ item.name_EN }}
-                </h2>
-                <v-fa class="title" :icon="[item.prefix,item.icon]" v-if="item.prefix" />
-              </v-card-text>
-              </v-card>
-            </v-badge>
+            <card :item="item" v-bind:translate="translate"></card>
           </v-col>
         </v-row>
         <v-progress-circular
@@ -114,22 +93,7 @@
         <p class="display-1 mt-5">{{$t("Works.web_title")}}</p>
         <v-row>
         <v-col v-for="(item, index) in web_works" :key="index"  cols="12" sm="6" md="4" lg="3">
-          <v-badge overlap :value="item.new" icon="mdi-star" color="error"  >
-            <v-card width="250" height="360" @click="go(item.url)" elevation="6">
-              <v-img :src="item.pic" height="250"></v-img>
-              <v-divider></v-divider>
-              <v-card-text>
-                <h2 class="title" v-if="!translate">
-                  {{ item.name }}
-                  <v-fa class="title" :icon="[item.prefix,item.icon]" v-if="item.prefix" />
-                </h2>
-                <h2 class="title" v-if="translate">
-                  {{ item.name_EN }}
-                  <v-fa class="title" :icon="[item.prefix,item.icon]" v-if="item.prefix" />
-                </h2>
-              </v-card-text>
-            </v-card>
-          </v-badge>
+          <card :item="item" v-bind:translate="translate"></card>
         </v-col>
         </v-row>
         <v-progress-circular
@@ -147,22 +111,7 @@
         <p class="headline"> {{ $t("Works.otherDescription")}} </p>
         <v-row>
           <v-col v-for="(item, index) in other_works" :key="index" cols="12" sm="6" md="4" lg="3">
-            <v-badge overlap :value="item.new" icon="mdi-star" color="green">
-              <v-card width="250" height="360" @click="go(item.url)" elevation="6">
-              <v-img :src="item.pic" height="250"></v-img>
-              <v-divider></v-divider>
-              <v-card-text>
-                <h2 class="title" v-if="!translate">
-                  {{ item.name }}
-                <v-fa class="title" :icon="[item.prefix,item.icon]" v-if="item.prefix" />
-                </h2>
-                <h2 class="title" v-if="translate">
-                  {{ item.name_EN }}
-                <v-fa class="title" :icon="[item.prefix,item.icon]" v-if="item.prefix" />
-                </h2>
-              </v-card-text>
-              </v-card>
-            </v-badge>
+            <card :item="item" v-bind:translate="translate" />
           </v-col>
         </v-row>
         <v-progress-circular
@@ -183,6 +132,7 @@
 import axios from 'axios'
 import Footer from '@/components/Footer.vue'
 import InfiniteLoading from 'vue-infinite-loading'
+import card from '@/components/worksCard.vue'
 
 const api = "https://script.google.com/macros/s/AKfycbzMaJHkwQXEmEDNO4GNNvEZDBWWWca5ZoL_b697X27gf54J6g/exec"
 
@@ -190,6 +140,7 @@ export default {
   name: 'home',
   components: {
     InfiniteLoading,
+    card,
     Footer,
   },
   data() {
@@ -206,6 +157,7 @@ export default {
   },
   created: function() {
     this.isNYD();
+    if(this.$i18n.locale === "en") this.translate = !this.translate;
   },
   methods:{
     // 元旦のみ表示する為の関数
@@ -218,7 +170,6 @@ export default {
       }
     },
     chLocale() {
-      this.translate = !this.translate;
       if(this.translate) {
         this.$i18n.locale = "en";
         document.documentElement.setAttribute('lang', 'en')
