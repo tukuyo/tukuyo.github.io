@@ -33,27 +33,7 @@
             <p class="headline">{{$t("About.hobby_title")}}</p>  
             <p class="body-1">{{$t("About.hobby")}}</p>
           </v-card-text>
-          <v-card-text>
-            <p class="headline">{{$t("About.skills_title")}}</p> 
-            <p class="subtitle-1">{{$t("About.major_skills_title")}}</p> 
-            <ul>
-              <li class="body-1">iOS</li>
-              <li class="body-1">VR/AR</li>
-            </ul>
-            <p class="subtitle-1 mt-5">{{$t("About.minor_skills_title")}}</p> 
-            <ul>
-              <li class="body-1">Swift</li>
-              <li class="body-1">python</li>
-              <li class="body-1">html, css, javascript</li>
-              <li class="body-1">vue.js</li>
-              <li class="body-1">firebase</li>
-            </ul>
-            
-            <p class="subtitle-1 mt-5">{{$t("About.other_skills")}}</p> 
-            <ul>
-              <li class="body-1">{{$t("About.other_SkillsList")}}</li>
-            </ul>
-          </v-card-text>
+          
           
         </v-col>
       </v-row>
@@ -87,39 +67,6 @@
       </v-card-text>
 
       <v-divider></v-divider>
-
-
-      <v-card-text>
-        <p class="display-1 mt-5">{{$t("Works.web_title")}}</p>
-        <v-row>
-        <v-col v-for="(item, index) in web_works" :key="index"  cols="12" sm="6" md="4" lg="3">
-          <card :item="item" v-bind:translate="translate"></card>
-        </v-col>
-        </v-row>
-        <v-progress-circular
-          indeterminate
-          color="orange"
-          v-if="loading"
-        ></v-progress-circular>
-      </v-card-text>
-
-
-      <v-divider></v-divider>
-
-      <v-card-text>
-        <p class="display-1 mt-5">{{$t("Works.other")}}</p>
-        <p class="headline"> {{ $t("Works.otherDescription")}} </p>
-        <v-row>
-          <v-col v-for="(item, index) in other_works" :key="index" cols="12" sm="6" md="4" lg="3">
-            <card :item="item" v-bind:translate="translate" />
-          </v-col>
-        </v-row>
-        <v-progress-circular
-          indeterminate
-          color="green"
-          v-if="loading"
-        ></v-progress-circular>
-      </v-card-text>
     </v-card>
 
     <Footer />
@@ -156,19 +103,9 @@ export default {
     }
   },
   created: function() {
-    this.isNYD();
     if(this.$i18n.locale === "en") this.translate = !this.translate;
   },
   methods:{
-    // 元旦のみ表示する為の関数
-    isNYD() {
-      var month = new Date().getMonth()+1;
-      var day = new Date().getDate();
-      if(month == 1 && day == 1){
-        window.location = "/NewYear"
-        this.$forceUpdate();
-      }
-    },
     chLocale() {
       if(this.translate) {
         this.$i18n.locale = "en";

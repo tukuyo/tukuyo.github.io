@@ -20,12 +20,6 @@ export default new Router({
       component: () => import(/* webpackChunkName: "privacy" */ './views/Privacy.vue')
     },
     {
-      path: '/NewYear',
-      name: 'NYD',
-      meta: { title: "Happy New Year. | tukuyo's Web Site ", desc: '謹賀新年' },
-      component: () => import(/* webpackChunkName: "NYD" */ './views/NewYear.vue')
-    },
-    {
       path: '*',
       name: '404',
       meta: { title: '404 Not Found', desc: 'URLを確認してください' },

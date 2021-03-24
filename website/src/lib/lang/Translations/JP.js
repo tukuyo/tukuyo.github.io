@@ -8,12 +8,12 @@ export default {
     About: {
       title: "プロフィール",
       profile: "私について",
-      text: "　初めまして，大阪の情報系の大学院(修士)に通っているYoshio Tsukudaです．小学生の時に，メモ帳でVBScriptなど簡単なプログラミングをしてプログラミングに興味を持ち，高校から情報系を専攻しました．\
-              今現在は，大学院でVR(Virtual Reality)に関する研究を行っており，個人開発では，主にiOSネイティブアプリケーションを作っています．",
-      text2: "未来永劫使われるようなソフトウェア開発に携わることが夢です．\
+      text: "小学生の時に、メモ帳でVBScriptなど簡単なプログラミングをしてプログラミングに興味を持ち、高校から情報系を専攻し、\
+             大学・大学院でVR(Virtual Reality)に関する研究を行っていました。個人開発では、主にiOSネイティブアプリケーションを作っています。",
+      text2: "未来永劫使われるようなソフトウェア開発に携わることが夢です。\
               お仕事お待ちしています :)",
       hobby_title: "趣味",
-      hobby: "音楽鑑賞，ギター，プログラミング，国内旅行",
+      hobby: "音楽鑑賞，ギター，プログラミング，旅行",
       skills_title: "スキル",
       major_skills_title: "専門",
       major_skills: "Unity(C#), Swift, iOS, VR",
@@ -24,7 +24,7 @@ export default {
       awards_list: "2019年度情報処理学会関西支部 支部大会 奨励賞",
     },
     Works: {
-      title: "作品",
+      title: "Works",
       description: "カードをクリックすると別のページへ遷移します．",
       ios_title: "iOS アプリ",
       web_title: "Web アプリ",
