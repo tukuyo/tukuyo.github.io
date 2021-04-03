@@ -49,8 +49,28 @@ jobs:
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
 
-      - name: Deploy Github Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN}}
-          publish_dir: ./dist
+      - name: SetUp git repogitories
+        env: 
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        run: |
+          echo "$DEPLOY_KEY" > ~/deploy_key.pem
+          chmod 600 ~/deploy_key.pem
+          git config --global user.email "tukuyo.dayo@gmail"
+          git config --global user.name "tukuyo"
+          cd dist
+          git config remote.origin.url "git@github.com:tukuyo/tukuyo.github.io.git"
+          git checkout master
+
+      - name: deploy pages
+        env: 
+          GIT_SSH_COMMAND: ssh -i ~/deploy_key.pem -o StrictHostKeyChecking=no -F /dev/null
+        run: |
+          cd dist
+          git add -A
+          if ! git diff -- cached --quiet; then
+            git commit -m "Deploy $GITHUB_SHA by Github Actions"
+            git pull origin master
+            git push origin master
+          fi
+
+
