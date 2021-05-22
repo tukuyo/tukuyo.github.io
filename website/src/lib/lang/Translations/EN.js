@@ -9,7 +9,7 @@ export default {
       title: "Profile",
       profile: "About me",
       text: "When I was in elementary school, I got interested in programming by doing simple programming such as VBScript on Notepad. I majored in information science from high school and did research on VR (Virtual Reality) at university and graduate school.In my personal development, I mainly create native iOS applications.",
-      text2: "My dream is to develop software that will be used forever.  We're looking forward to working with you :)",
+      text2: "We're looking forward to working with you. :)",
       hobby_title: "Hobby",
       hobby: "Music appreciation, guitar, programming, travel",
       skills_title: "Skills",
