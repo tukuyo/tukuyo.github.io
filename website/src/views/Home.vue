@@ -9,50 +9,38 @@
       <v-switch color="primary" v-model="translate" @click="chLocale"  inset></v-switch>
     </v-system-bar>
     
-    <v-card>
+    <div class="ml-5 mr-5">
       <v-row align="center" class="lightbox pa-2 fill-height">
-        <v-card-text class="display-1 text-center mb-0 pb-0">
-            <p>{{$t("About.title")}}</p>
-        </v-card-text>
         <v-col align="center" cols="16" sm="16" md="6" lg="6">
+          <div class="display-1 text-center mb-10 pb-0">{{$t("About.title")}}</div>
           <v-img src="../assets/pic/icon.png" max-height="35%" max-width="35%" contain></v-img>
-          <v-card-text class="display-1 text-center mb-0 pb-0">
-            <p>{{$t("Home.Name")}}</p>
-          </v-card-text>
+          <p class="display-1 text-center mb-10 mt-5 pb-0">{{$t("Home.Name")}}</p>
         </v-col>
 
         <v-col cols="16" sm="12" md="6" lg="5">
-          <v-card-text class="mb-0 pb-0">
-            <p class="headline mb-0 pb-0">{{$t("About.profile")}}</p>
-          </v-card-text>
-          <v-card-text>
-            <p class="body-1">{{$t("About.text")}}</p>
-            <p class="body-1">{{$t("About.text2")}}</p>
-          </v-card-text>
-          <v-card-text>
-            <p class="headline">{{$t("About.hobby_title")}}</p>  
-            <p class="body-1">{{$t("About.hobby")}}</p>
-          </v-card-text>
-          
-          
+          <p class="headline mb-0 pb-0">{{$t("About.profile")}}</p>
+          <p class="body-1">{{$t("About.text")}}</p>
+          <p class="body-1">{{$t("About.text2")}}</p>
+          <p class="headline">{{$t("About.hobby_title")}}</p>  
+          <p class="body-1">{{$t("About.hobby")}}</p>
         </v-col>
       </v-row>
       <infinite-loading @infinite="load" class="noVis"></infinite-loading>
-    </v-card>
+    </div>
 
     <v-divider></v-divider>
 
     
 
-    <v-card class="black--text text-center">
-      <v-card-text class="display-2 text-center">
+    <div class="black--text text-center ma-5">
+      <div class="display-2 text-center">
         <p>{{$t("Works.title")}}</p>
-      </v-card-text>
-      <v-card-text class="headline text-center">
+      </div>
+      <div class="headline text-center">
         <p>{{$t("Works.description")}}</p>
-      </v-card-text>
+      </div>
 
-      <v-card-text>
+      <div>
         <p class="display-1">{{$t("Works.ios_title")}}</p>
         <v-row>
           <v-col v-for="(item, index) in app_works" :key="index" cols="12" sm="6" md="4" lg="3">
@@ -64,10 +52,8 @@
           color="primary"
           v-if="loading"
         ></v-progress-circular>
-      </v-card-text>
-
-      <v-divider></v-divider>
-    </v-card>
+      </div>
+    </div>
 
     <Footer />
   </div>

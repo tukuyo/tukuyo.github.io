@@ -1,10 +1,10 @@
 <template>
-  <v-footer padless>
-    <v-card flat tile class="blue-grey lighten-1 #B0BEC5 black--text text-center wa">
-      <v-card-text class="black--text headline pb-0">
+  <div padless>
+    <div class="blue-grey lighten-1 #B0BEC5  text-center pa-5">
+      <div class="black--text headline pb-0">
         LINKS
-      </v-card-text>
-      <v-card-text>
+      </div>
+      <div class="pa-5">
         <v-tooltip bottom 
                   v-for="icon in icons"
                   :key="icon.img">
@@ -33,31 +33,31 @@
           </template>
           <span>Goods</span>
         </v-tooltip>
-      </v-card-text>
+      </div>
 
-      <v-card-text class="black--text pt-0">
+      <div class="black--text pt-0">
         {{$t("Footer.text")}}     
-      </v-card-text>
+      </div>
       
       <v-divider></v-divider>
-      <v-card-text>
+      <div class="mt-5 mb-5">
         <v-btn to="/privacy-policy">Privacy & Policy</v-btn>
-      </v-card-text>
+      </div>
 
 
-      <v-card-text hidden>
+      <div hidden>
         <p class="headline">Old version of the web site. :)</p>
         <v-btn to="/old-Home">{{$t("Home.oldHome")}}</v-btn>
-      </v-card-text>
+      </div>
       
 
       <v-divider></v-divider>
 
-      <v-card-text class="black--text">
+      <div class="black--text">
         &copy;{{ new Date().getFullYear() }} — <strong>tukuyo</strong>
-      </v-card-text>
-    </v-card>
-  </v-footer>
+      </div>
+    </div>
+  </div>
 </template>
 
 
