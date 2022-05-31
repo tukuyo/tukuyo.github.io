@@ -85,7 +85,7 @@ export default {
       app_works: [],
       other_works: [],
       loadNum: 0,
-      loading: true
+      loading: true,
     }
   },
   created: function() {

@@ -69,9 +69,9 @@ export default {
         {name: "Twitter (@tukutuku_tukuyo)",img: require("../assets/pic/twitter.svg"), url: "https://twitter.com/tukutuku_tukuyo"},
         {name: "instagram",img: require("../assets/pic/instagram.svg"), url: "https://www.instagram.com/tukuyo_apps/"},
         {name: "GitHub (tukuyo)",img: require("../assets/pic/github.svg"), url: "https://github.com/tukuyo"},
-        {name: "Blog (Japanese)",img: require("../assets/pic/hatena.svg"), url: "https://blog.tukuyo.net/"},
+        {name: "Blog (Japanese)",img: require("../assets/pic/hatena.svg"), url: "https://tukuyo.net/"},
         {name: "Qiita (Japanese)",img: require("../assets/pic/qiita.svg"), url: "https://qiita.com/tukutuku_tukuyo"},
-        {name: "Mail",img: require("../assets/pic/mail.svg"), url: "mailto:tukuyo.dayo@gmail.com"},
+        {name: "Mail",img: require("../assets/pic/mail.svg"), url: "mailto:dev@tukuyo.net"},
       ]
     }
   },
