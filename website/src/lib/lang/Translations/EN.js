@@ -23,7 +23,7 @@ export default {
         },
         Works: {
             title: "Works",
-            description: "Click the card to go to another page.",
+            description: "Click on a card to view details.",
             ios_title: "iOS Application",
             web_title: "Web Application",
             other: "Other",

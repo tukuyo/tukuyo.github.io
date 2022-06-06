@@ -41,7 +41,6 @@
       </div>
 
       <div>
-        <p class="display-1">{{$t("Works.ios_title")}}</p>
         <v-row>
           <v-col v-for="(item, index) in app_works" :key="index" cols="12" sm="6" md="4" lg="3">
             <card :item="item" v-bind:translate="translate"></card>

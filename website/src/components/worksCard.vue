@@ -12,7 +12,6 @@
         <h2 class="title" v-if="translate">
           {{ item.name_EN }}
         </h2>
-        <v-fa class="title" :icon="[item.prefix,item.icon]" v-if="item.prefix" />
       </v-card-text>
       </v-card>
     </v-badge>
